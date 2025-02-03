@@ -7,6 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonjourGUI", "BonjourGUI\Bo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonjourClasses", "BonjourClasses\BonjourClasses.csproj", "{8194AF15-36D1-45B8-9D1E-940359AC31DF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{2592CC7E-051A-406D-BE6B-70A8C7C461CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Topics", "Topics", "{FA9981B2-9909-4B76-B2F4-8CBDFB5A1EEA}"
+	ProjectSection(SolutionItems) = preProject
+		Food.txt = Food.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +31,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FA9981B2-9909-4B76-B2F4-8CBDFB5A1EEA} = {2592CC7E-051A-406D-BE6B-70A8C7C461CA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {73A94A50-4538-4D92-BA56-47CB8971B2AA}

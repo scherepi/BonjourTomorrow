@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BonjourClasses;
 
 namespace BonjourGUI
 {
@@ -15,6 +16,11 @@ namespace BonjourGUI
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Class1 c = new Class1();
         }
     }
 }
