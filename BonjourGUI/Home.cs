@@ -11,16 +11,12 @@ using BonjourClasses;
 
 namespace BonjourGUI
 {
-    public partial class Form1 : Form
+    public partial class BonjourTomorrow : Form
     {
-        public Form1()
+        public BonjourTomorrow()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Class1 c = new Class1();
-        }
     }
 }
