@@ -29,6 +29,17 @@ namespace BonjourGUI
         private void ThreadHomeForm()
         {
             Application.Run(new BonjourTomorrow());
-        }   
+        }
+
+        private void btnReview_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Thread t = new Thread(new ThreadStart(ThreadReviewForm));
+            t.Start();
+        }
+        private void ThreadReviewForm()
+        {
+            Application.Run(new frmReview());
+        }
     }
 }

@@ -35,6 +35,8 @@
             this.lbl_Greeting = new System.Windows.Forms.Label();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btn_quickStart = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -95,6 +97,7 @@
             this.btnSettings.Size = new System.Drawing.Size(84, 82);
             this.btnSettings.TabIndex = 6;
             this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // btn_quickStart
             // 
@@ -107,14 +110,35 @@
             this.btn_quickStart.TabIndex = 0;
             this.btn_quickStart.UseVisualStyleBackColor = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(212)))), ((int)(((byte)(75)))));
+            this.label4.Location = new System.Drawing.Point(209, 43);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 13);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "▀▀▀▀▀▀▀";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(105)))), ((int)(((byte)(216)))));
+            this.label3.Location = new System.Drawing.Point(15, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 13);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "███████";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 43);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(41)))), ((int)(((byte)(96)))));
+            this.label2.Location = new System.Drawing.Point(112, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "███████";
+            this.label2.TabIndex = 22;
+            this.label2.Text = "▀▀▀▀▀▀▀";
             // 
             // BonjourTomorrow
             // 
@@ -122,6 +146,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.lbl_Greeting);
@@ -146,6 +172,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_Greeting;
         private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
     }
 }

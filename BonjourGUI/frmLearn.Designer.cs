@@ -65,6 +65,7 @@
             this.btnReview.TabIndex = 10;
             this.btnReview.Text = "REVIEW";
             this.btnReview.UseVisualStyleBackColor = true;
+            this.btnReview.Click += new System.EventHandler(this.btnReview_Click);
             // 
             // btnLearn
             // 
@@ -105,7 +106,7 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "▀▀▀▀▀▀▀";
             // 
-            // Learn
+            // frmLearn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -117,7 +118,7 @@
             this.Controls.Add(this.btnReview);
             this.Controls.Add(this.btnLearn);
             this.Controls.Add(this.btnHome);
-            this.Name = "Learn";
+            this.Name = "frmLearn";
             this.Text = "Learn";
             this.ResumeLayout(false);
             this.PerformLayout();
