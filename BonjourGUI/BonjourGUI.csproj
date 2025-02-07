@@ -81,6 +81,9 @@
     <EmbeddedResource Include="frmReview.resx">
       <DependentUpon>frmReview.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -115,6 +118,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2821378 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
