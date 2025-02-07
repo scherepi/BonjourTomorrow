@@ -21,6 +21,9 @@ namespace BonjourClasses
         {
             return (a.Equals(this.correctAnswer));
         }
+        public LinkedList<Answer> getAnswers() {
+            return this.answers;
+        }
         public String getText() 
         {
             return this.text;
