@@ -46,21 +46,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Home.cs">
+    <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLearn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLearn.Designer.cs">
+      <DependentUpon>frmLearn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReview.Designer.cs">
+      <DependentUpon>frmReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLearn.resx">
+      <DependentUpon>frmLearn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReview.resx">
+      <DependentUpon>frmReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -84,25 +117,10 @@
     <None Include="Resources\Group 1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Group 1 %281%29.png" />
+    <None Include="Resources\2821378 1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\eiffel tower.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Ellipse 1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2821378 11.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cog icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cog icon1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cog icon2.png" />
+    <None Include="Resources\back-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
