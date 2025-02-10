@@ -51,5 +51,10 @@ namespace BonjourGUI
         {
             Application.Run(new frmSettings());
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

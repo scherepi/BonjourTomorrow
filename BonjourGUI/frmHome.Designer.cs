@@ -33,11 +33,12 @@
             this.btnReview = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_Greeting = new System.Windows.Forms.Label();
-            this.btnSettings = new System.Windows.Forms.Button();
-            this.btn_quickStart = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.btn_quickStart = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnHome
@@ -89,27 +90,6 @@
             this.lbl_Greeting.TabIndex = 5;
             this.lbl_Greeting.Text = "Bonjour!";
             // 
-            // btnSettings
-            // 
-            this.btnSettings.Image = global::BonjourGUI.Properties.Resources._2821378_1;
-            this.btnSettings.Location = new System.Drawing.Point(704, 12);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(84, 82);
-            this.btnSettings.TabIndex = 6;
-            this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            // 
-            // btn_quickStart
-            // 
-            this.btn_quickStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.btn_quickStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_quickStart.Image = global::BonjourGUI.Properties.Resources.Group_1;
-            this.btn_quickStart.Location = new System.Drawing.Point(118, 118);
-            this.btn_quickStart.Name = "btn_quickStart";
-            this.btn_quickStart.Size = new System.Drawing.Size(208, 208);
-            this.btn_quickStart.TabIndex = 0;
-            this.btn_quickStart.UseVisualStyleBackColor = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -140,12 +120,44 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "▀▀▀▀▀▀▀";
             // 
+            // btnExit
+            // 
+            this.btnExit.Image = global::BonjourGUI.Properties.Resources.Adobe_Express___file;
+            this.btnExit.Location = new System.Drawing.Point(713, 363);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 75);
+            this.btnExit.TabIndex = 25;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.Image = global::BonjourGUI.Properties.Resources._2821378_1;
+            this.btnSettings.Location = new System.Drawing.Point(704, 12);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(84, 82);
+            this.btnSettings.TabIndex = 6;
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
+            // btn_quickStart
+            // 
+            this.btn_quickStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btn_quickStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_quickStart.Image = global::BonjourGUI.Properties.Resources.Group_1;
+            this.btn_quickStart.Location = new System.Drawing.Point(118, 118);
+            this.btn_quickStart.Name = "btn_quickStart";
+            this.btn_quickStart.Size = new System.Drawing.Size(208, 208);
+            this.btn_quickStart.TabIndex = 0;
+            this.btn_quickStart.UseVisualStyleBackColor = false;
+            // 
             // BonjourTomorrow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -175,6 +187,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 

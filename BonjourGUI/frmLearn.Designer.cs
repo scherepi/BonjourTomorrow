@@ -35,6 +35,9 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnQuestions = new System.Windows.Forms.Button();
+            this.btnTopics = new System.Windows.Forms.Button();
+            this.btnAC = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -106,11 +109,48 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "▀▀▀▀▀▀▀";
             // 
+            // btnQuestions
+            // 
+            this.btnQuestions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(111)))), ((int)(((byte)(166)))));
+            this.btnQuestions.Font = new System.Drawing.Font("Itim", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuestions.Location = new System.Drawing.Point(125, 87);
+            this.btnQuestions.Name = "btnQuestions";
+            this.btnQuestions.Size = new System.Drawing.Size(555, 78);
+            this.btnQuestions.TabIndex = 15;
+            this.btnQuestions.Text = "Questions";
+            this.btnQuestions.UseVisualStyleBackColor = false;
+            // 
+            // btnTopics
+            // 
+            this.btnTopics.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(111)))), ((int)(((byte)(166)))));
+            this.btnTopics.Font = new System.Drawing.Font("Itim", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTopics.Location = new System.Drawing.Point(123, 186);
+            this.btnTopics.Name = "btnTopics";
+            this.btnTopics.Size = new System.Drawing.Size(555, 78);
+            this.btnTopics.TabIndex = 16;
+            this.btnTopics.Text = "Topics";
+            this.btnTopics.UseVisualStyleBackColor = false;
+            this.btnTopics.Click += new System.EventHandler(this.btnTopics_Click);
+            // 
+            // btnAC
+            // 
+            this.btnAC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(111)))), ((int)(((byte)(166)))));
+            this.btnAC.Font = new System.Drawing.Font("Itim", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAC.Location = new System.Drawing.Point(125, 290);
+            this.btnAC.Name = "btnAC";
+            this.btnAC.Size = new System.Drawing.Size(555, 78);
+            this.btnAC.TabIndex = 17;
+            this.btnAC.Text = "Arts and Culture";
+            this.btnAC.UseVisualStyleBackColor = false;
+            // 
             // frmLearn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAC);
+            this.Controls.Add(this.btnTopics);
+            this.Controls.Add(this.btnQuestions);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -134,5 +174,8 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnQuestions;
+        private System.Windows.Forms.Button btnTopics;
+        private System.Windows.Forms.Button btnAC;
     }
 }
