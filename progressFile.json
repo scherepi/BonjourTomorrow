@@ -1,0 +1,29 @@
+{
+	"topicProgress": {
+		"Food": {
+			"Completed": 0,
+			"Total": 40
+		},
+		"Greetings": {
+			"Completed": 0,
+			"Total": 40
+		},
+		"Numbers": {
+			"Completed": 0,
+			"Total": 40
+		},
+		"Business": {
+			"Completed": 0,
+			"Total": 40
+		}
+	},
+	"unlocks": {
+		"AandC": {
+			"Louvre": false,
+			"Bakery": false
+		},
+		"Misc": {
+			"Eraser" :  false
+		}
+	}
+}

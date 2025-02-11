@@ -14,9 +14,16 @@ namespace BonjourGUI
 {
     public partial class BonjourTomorrow : Form
     {
+        public bool initialized = false;
         public BonjourTomorrow()
         {
             InitializeComponent();
+            initialized = true;
+            if (!initialized)
+            {
+                DataHandler dataHandler = new DataHandler();
+                ProgressHandler progressHandler = dataHandler.loadProgress();
+            }
         }
 
         private void btnLearn_Click(object sender, EventArgs e)
