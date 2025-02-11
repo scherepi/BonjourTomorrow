@@ -35,6 +35,15 @@ namespace BonjourClasses
                 throw new FileNotFoundException();
             }
         }
-        public 
+        public ProgressHandler loadProgress()
+        {
+            String progressFile = this.dataPath + "../progress.json";
+            if (File.Exists(progressFile)) {
+                return new ProgressHandler(File.ReadAllText(progressFile));
+            } else
+            {
+                throw new Exception("Progress file not found!");
+            }
+        }
     }
 }
