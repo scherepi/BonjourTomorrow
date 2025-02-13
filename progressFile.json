@@ -18,12 +18,8 @@
 		}
 	},
 	"unlocks": {
-		"AandC": {
 			"Louvre": false,
-			"Bakery": false
-		},
-		"Misc": {
+			"Bakery": false,
 			"Eraser" :  false
-		}
 	}
 }

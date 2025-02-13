@@ -7,12 +7,19 @@ using System.Threading.Tasks;
 using System.IO;
 using System.CodeDom;
 
+// TODOs:
+// - Code cleanup, remove unnecessary checks (we have error handling for a reason)
+// - Add comments
+// - Add more error handling
+// - Make sure to anchor it somewhere in the program, have it passed between threads
+
 namespace BonjourClasses
 {
     public class DataHandler
     {
-        public String dataPath;
-        public LinkedList<Topic> topicList;
+        public String dataPath; // The path to the data folder
+        public LinkedList<Topic> topicList; // The list of Topic objects and the questions they contain.
+        public ProgressHandler progressHandler;
         public DataHandler(String dataPath)
         {
             this.dataPath = dataPath;
@@ -23,10 +30,22 @@ namespace BonjourClasses
             // if the data folder exists, then we wanna go through each topic file and pass it to the constructor!
             if (Directory.Exists(this.dataPath))
             {
-                foreach (String file in Directory.GetFiles(this.dataPath))
+                if (Directory.Exists(this.dataPath + "Topics/") { 
+                    foreach (String file in Directory.GetFiles(this.dataPath + "Topics/"))
+                    {
+                        // add to our master topic list the created Topic object, passing the file's name and its contents
+                        this.topicList.AddLast(new Topic(file, File.ReadAllText(file)));
+                    }
+                }
+                else {
+                    // uh oh, our topics folder's missing - report this to the program
+                    Console.Error.WriteLine("Unable to find topics directory.");
+                    throw new FileNotFoundException();
+                }
+                if (File.Exists(this.dataPath + "progressFile.json"))
                 {
-                    // add to our master topic list the created Topic object, passing the file's name and its contents
-                    this.topicList.AddLast(new Topic(file, File.ReadAllText(file)));
+                    // Great, found our progress file. Let's make a new ProgressHandler object with it.
+                    this.progressHandler = new ProgressHandler(this, File.ReadAllText(this.dataPath + "progressFile.json"));
                 }
             }
             else {
