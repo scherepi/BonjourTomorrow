@@ -11,20 +11,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BonjourClasses;
 
+// TODOs:
+// - Increase verbosity
+
 namespace BonjourGUI
 {
     public partial class BonjourTomorrow : Form
     {
-        public bool initialized = false;
+        public bool dataInitialized = false;
         public BonjourTomorrow()
         {
             InitializeComponent();
-            initialized = true;
-            if (!initialized)
+            if (!dataInitialized)
             {
-                DataHandler dataHandler = new DataHandler("/Data/");
+                DataHandler dataHandler = new DataHandler(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\..\\..\\..\\Data");
                 ProgressHandler progressHandler = dataHandler.loadProgress();
             }
+            dataInitialized = true;
         }
 
         private void btnLearn_Click(object sender, EventArgs e)

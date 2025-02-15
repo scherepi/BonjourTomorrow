@@ -28,9 +28,10 @@ namespace BonjourClasses
         }
         public void initalizeData() {
             // if the data folder exists, then we wanna go through each topic file and pass it to the constructor!
+            Console.WriteLine("Trying to read from " + this.dataPath);
             if (Directory.Exists(this.dataPath))
             {
-                if (Directory.Exists(this.dataPath + "Topics/") { 
+                if (Directory.Exists(this.dataPath + "Topics/")) { 
                     foreach (String file in Directory.GetFiles(this.dataPath + "Topics/"))
                     {
                         // add to our master topic list the created Topic object, passing the file's name and its contents
@@ -57,8 +58,9 @@ namespace BonjourClasses
         public ProgressHandler loadProgress()
         {
             String progressFile = this.dataPath + "../progress.json";
+            Console.WriteLine("Trying to read from " + progressFile);
             if (File.Exists(progressFile)) {
-                return new ProgressHandler(File.ReadAllText(progressFile));
+                return new ProgressHandler(this, File.ReadAllText(progressFile));
             } else
             {
                 throw new Exception("Progress file not found!");
