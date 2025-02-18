@@ -32,6 +32,9 @@ namespace BonjourClasses
         }
         public Topic(String name, String data) {
             //TODO: implement constructor with file data
+            this.name = name;
+            this.Questions = new Dictionary<Question, double>();
+
         }
     }
 }

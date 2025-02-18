@@ -25,6 +25,7 @@ namespace BonjourGUI
             InitializeComponent();
             // Initialize data, because it hasn't been initialized yet if we're using this constructor.
             this.dataHandler = new DataHandler(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\..\\..\\..\\Data");
+            this.dataHandler.initalizeData();
             this.progressHandler = dataHandler.loadProgress();
         }
 
@@ -66,7 +67,7 @@ namespace BonjourGUI
         }
         private void ThreadSettingsForm()
         {
-            Application.Run(new frmSettings());
+            Application.Run(new frmSettings(this.progressHandler, this.dataHandler));
         }
 
         private void btnExit_Click(object sender, EventArgs e)

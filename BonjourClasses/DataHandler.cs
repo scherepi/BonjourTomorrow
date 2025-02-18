@@ -26,6 +26,18 @@ namespace BonjourClasses
             this.topicList = new LinkedList<Topic>();
             try { this.initalizeData(); } catch (FileNotFoundException) { System.Console.WriteLine("Unable to initalize data!"); }
         }
+        public void printDebug()
+        {
+            Console.WriteLine("Data Path: " + this.dataPath);
+            Console.WriteLine("Topic Count: " + this.topicList.Count);
+            Console.WriteLine("Progress Handler: " + (this.progressHandler != null ? "Initialized" : "Uninitialized") );
+            Console.WriteLine("Topics Loaded: ");
+            foreach (Topic t in this.topicList) { Console.WriteLine(t.getName()); }
+            Console.WriteLine("Questions Loaded: ");
+            int sum = 0;
+            foreach (Topic t in this.topicList) { sum += t.getQuestions().Count; }
+            Console.WriteLine(sum);
+        }
         public void initalizeData() {
             // if the data folder exists, then we wanna go through each topic file and pass it to the constructor!
             Console.WriteLine("Trying to read from " + this.dataPath);

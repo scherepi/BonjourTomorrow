@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BonjourClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,13 @@ namespace BonjourGUI
 {
     public partial class frmSettings : Form
     {
-        public frmSettings()
+        public ProgressHandler ph;
+        public DataHandler dh;
+        public frmSettings(ProgressHandler ph, DataHandler dh)
         {
             InitializeComponent();
+            this.ph = ph;
+            this.dh = dh;
         }
 
         private void btn_Return_Click(object sender, EventArgs e)
@@ -27,6 +32,11 @@ namespace BonjourGUI
         private void ThreadHomeForm()
         {
             Application.Run(new BonjourTomorrow());
+        }
+
+        private void btn_DataDebug_Click(object sender, EventArgs e)
+        {
+            this.dh.printDebug();
         }
     }
 }
