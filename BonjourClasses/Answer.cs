@@ -9,15 +9,15 @@ namespace BonjourClasses
     public class Answer
     {
         public String text;
-        public Question associatedQuestion;
+
+        public Answer(String text)
+        {
+            this.text = text;
+        }
 
         public String getText()
         {
             return this.text;
-        }
-        public Question getParent()
-        {
-            return this.associatedQuestion;
         }
     }
 }

@@ -17,6 +17,15 @@ namespace BonjourClasses
         public double difficulty;
         public (int, int) prevAttempts;
 
+        public Question(String text, double difficulty, LinkedList<Answer> answers, Answer correctAnswer)
+        {
+            this.text = text;
+            this.questionID = SessionHandler.getNextID();
+            this.difficulty = difficulty;
+            this.answers = answers;
+            this.correctAnswer = correctAnswer;
+            this.prevAttempts = (0, 0);
+        }
         public bool submitAnswer(Answer a)
         {
             return (a.Equals(this.correctAnswer));

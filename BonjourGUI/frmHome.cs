@@ -31,11 +31,14 @@ namespace BonjourGUI
 
         public BonjourTomorrow(DataHandler dataHandler, ProgressHandler progressHandler)
         {
+            Console.WriteLine("Home received handlers");
             InitializeComponent();
             // Use the handlers we've previously initialized for the program, passed back to us!
             this.dataHandler = dataHandler;
             this.progressHandler = progressHandler;
         }
+
+        // BUTTONS TO NAVIGATE APPLICATION
 
         private void btnLearn_Click(object sender, EventArgs e)
         {

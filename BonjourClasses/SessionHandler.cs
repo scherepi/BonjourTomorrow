@@ -13,6 +13,7 @@ namespace BonjourClasses
     {
         public static Session currentSession = null;
         public static DataHandler dh = null;
+        private static uint nextID = 0;
         public static void startSession()
         {
             if (dh != null) { 
@@ -30,6 +31,12 @@ namespace BonjourClasses
         public static void passHandler(DataHandler dh)
         {
             SessionHandler.dh = dh;
+        }
+        public static uint getNextID()
+        {
+            uint current = nextID;
+            nextID++;
+            return current;
         }
 
     }
