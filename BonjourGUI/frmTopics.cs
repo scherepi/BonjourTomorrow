@@ -8,14 +8,19 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BonjourClasses;
 
 namespace BonjourGUI
 {
     public partial class frmTopics : Form
     {
-        public frmTopics()
+        private ProgressHandler ph;
+        private DataHandler dh;
+        public frmTopics(ProgressHandler ph, DataHandler dh)
         {
             InitializeComponent();
+            this.ph = ph;
+            this.dh = dh; 
         }
 
         private void btn_Return_Click(object sender, EventArgs e)

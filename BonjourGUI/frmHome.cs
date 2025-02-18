@@ -18,16 +18,22 @@ namespace BonjourGUI
 {
     public partial class BonjourTomorrow : Form
     {
-        public bool dataInitialized = false;
+        public DataHandler dataHandler;
+        public ProgressHandler progressHandler;
         public BonjourTomorrow()
         {
             InitializeComponent();
-            if (!dataInitialized)
-            {
-                DataHandler dataHandler = new DataHandler(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\..\\..\\..\\Data");
-                ProgressHandler progressHandler = dataHandler.loadProgress();
-            }
-            dataInitialized = true;
+            // Initialize data, because it hasn't been initialized yet if we're using this constructor.
+            this.dataHandler = new DataHandler(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\..\\..\\..\\Data");
+            this.progressHandler = dataHandler.loadProgress();
+        }
+
+        public BonjourTomorrow(DataHandler dataHandler, ProgressHandler progressHandler)
+        {
+            InitializeComponent();
+            // Use the handlers we've previously initialized for the program, passed back to us!
+            this.dataHandler = dataHandler;
+            this.progressHandler = progressHandler;
         }
 
         private void btnLearn_Click(object sender, EventArgs e)
@@ -38,7 +44,7 @@ namespace BonjourGUI
         }
         private void ThreadLearnForm()
         {
-            Application.Run(new frmLearn());
+            Application.Run(new frmLearn(this.progressHandler, this.dataHandler));
         }
 
         private void btnReview_Click(object sender, EventArgs e)
@@ -49,7 +55,7 @@ namespace BonjourGUI
         }
         private void ThreadReviewForm()
         {
-            Application.Run(new frmReview());
+            Application.Run(new frmReview(this.progressHandler, this.dataHandler));
         }
 
         private void btnSettings_Click(object sender, EventArgs e)

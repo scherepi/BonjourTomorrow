@@ -8,14 +8,19 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BonjourClasses;
 
 namespace BonjourGUI
 {
     public partial class frmReview : Form
     {
-        public frmReview()
+        private DataHandler dh;
+        private ProgressHandler ph;
+        public frmReview(ProgressHandler ph, DataHandler dh)
         {
             InitializeComponent();
+            this.dh = dh;
+            this.ph = ph;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -26,7 +31,7 @@ namespace BonjourGUI
         }
         private void ThreadHomeForm()
         {
-            Application.Run(new BonjourTomorrow());
+            Application.Run(new BonjourTomorrow(this.dh, this.ph));
         }
 
         private void btnLearn_Click(object sender, EventArgs e)
@@ -37,7 +42,7 @@ namespace BonjourGUI
         }
         private void ThreadLearnForm()
         {
-            Application.Run(new frmLearn());
+            Application.Run(new frmLearn(this.ph, this.dh));
         }
     }
 }

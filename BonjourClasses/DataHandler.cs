@@ -31,10 +31,11 @@ namespace BonjourClasses
             Console.WriteLine("Trying to read from " + this.dataPath);
             if (Directory.Exists(this.dataPath))
             {
-                if (Directory.Exists(this.dataPath + "Topics/")) { 
-                    foreach (String file in Directory.GetFiles(this.dataPath + "Topics/"))
+                if (Directory.Exists(this.dataPath + "\\Topics")) { 
+                    foreach (String file in Directory.GetFiles(this.dataPath + "\\Topics"))
                     {
                         // add to our master topic list the created Topic object, passing the file's name and its contents
+                        Console.WriteLine("Found topic file: " + file);
                         this.topicList.AddLast(new Topic(file, File.ReadAllText(file)));
                     }
                 }
@@ -57,7 +58,7 @@ namespace BonjourClasses
         }
         public ProgressHandler loadProgress()
         {
-            String progressFile = this.dataPath + "../progress.json";
+            String progressFile = this.dataPath + "\\progressFile.json";
             Console.WriteLine("Trying to read from " + progressFile);
             if (File.Exists(progressFile)) {
                 return new ProgressHandler(this, File.ReadAllText(progressFile));
@@ -65,6 +66,17 @@ namespace BonjourClasses
             {
                 throw new Exception("Progress file not found!");
             }
+        }
+        public Topic getTopic(String name)
+        {
+            foreach (Topic topic in this.topicList)
+            {
+                if (topic.getName() == name)
+                {
+                    return topic;
+                }
+            }
+            return null;
         }
     }
 }
