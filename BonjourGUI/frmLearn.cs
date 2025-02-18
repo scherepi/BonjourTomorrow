@@ -44,7 +44,7 @@ namespace BonjourGUI
         }
         private void ThreadReviewForm()
         {
-            Application.Run(new frmReview());
+            Application.Run(new frmReview(this.ph, this.dh));
         }
 
         private void btnTopics_Click(object sender, EventArgs e)
@@ -55,7 +55,7 @@ namespace BonjourGUI
         }
         private void ThreadTopicsForm()
         {
-            Application.Run(new frmTopics());
+            Application.Run(new frmTopics(this.ph, this.dh));
         }
     }
 }

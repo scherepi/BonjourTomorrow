@@ -78,5 +78,20 @@ namespace BonjourClasses
             }
             return null;
         }
+        public List<Question> getQuickQuestions() { 
+            int numFromEach = (int)Math.Round((20.0 / this.topicList.Count));
+            List<Question> list = new List<Question>();
+            Random rnd = new Random();
+            foreach (Topic t in this.topicList)
+            {
+                for (int i = 0; i < numFromEach; i++)
+                {
+                    Question[] tArray = t.getQuestions().ToArray();
+                    list.Add(tArray[rnd.Next(0, t.getQuestions().Count)]);
+                }
+
+            }
+            return list;
+        }
     }
 }

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using BonjourClasses;
 
 namespace BonjourClasses
 {
@@ -12,7 +9,7 @@ namespace BonjourClasses
         private int currentQuestion;
         private int totalQuestions;
         private int currentCorrect;
-        public Session(Topic t) 
+        public Session(Topic t)
         {
             this.sessionQuestions = new Queue<Question>();
             foreach (Question q in t.getQuestions())
@@ -23,18 +20,26 @@ namespace BonjourClasses
             this.totalQuestions = this.sessionQuestions.Count;
             this.currentCorrect = 0;
         }
-        public Question getNextQuestion()
+        
+        public Session(List<Question> sessionQuestions)
         {
-            if (this.currentQuestion < this.totalQuestions)
-            {
-                this.currentQuestion++;
-                return this.sessionQuestions.Dequeue();
-            }
-            else
-            {
-                return null;
-            }
+            this.sessionQuestions = new Queue<Question>(sessionQuestions);
+            this.currentQuestion = 0;
+            this.totalQuestions = this.sessionQuestions.Count;
+            this.currentCorrect = 0;
         }
+        public Question getNextQuestion()
+            {
+                if (this.currentQuestion < this.totalQuestions)
+                {
+                    this.currentQuestion++;
+                    return this.sessionQuestions.Dequeue();
+                }
+                else
+                {
+                    return null;
+                }
+            }
         public void submitAnswer(Answer a)
         {
             if (a.getParent().submitAnswer(a))
@@ -43,4 +48,5 @@ namespace BonjourClasses
             }
         }
     }
+    
 }

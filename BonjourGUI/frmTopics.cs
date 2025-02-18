@@ -30,7 +30,7 @@ namespace BonjourGUI
             t.Start();
         }
         private void returnToLearn() {
-            Application.Run(new frmLearn());
+            Application.Run(new frmLearn(this.ph, this.dh));
         }
     }
 }
