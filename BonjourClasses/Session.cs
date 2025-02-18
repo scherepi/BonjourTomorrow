@@ -42,7 +42,7 @@ namespace BonjourClasses
             }
         public void submitAnswer(Answer a)
         {
-            if (a.getParent().submitAnswer(a))
+            if (a.isCorrect())
             {
                 this.currentCorrect++;
             }

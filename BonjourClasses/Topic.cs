@@ -32,31 +32,34 @@ namespace BonjourClasses
             return null;
         }
         public Topic(String name, String data) {
-            //TODO: implement constructor with file data
+            // Grab our topic name first
             this.name = name;
-            this.Questions = new Dictionary<Question, double>();
-            StringReader sr = new StringReader(data);
+            this.Questions = new Dictionary<Question, double>(); // Init the dictionary
+            StringReader sr = new StringReader(data); // Use a StringReader to read the data provided!
             String nextLine;
+            // For every line (question) in our provided data string:
             while ((nextLine = sr.ReadLine()) != null)
             {
-                String questionText = nextLine.Split(']')[0].Substring(1);
-                String[] answers = nextLine.Split(']')[1].Split(')')[0].Substring(2).Split(',');
-                LinkedList<Answer> answerList = new LinkedList<Answer>();
-                Answer correct;
-                foreach (String a in answers) 
+                String questionText = nextLine.Split(']')[0].Substring(1); // First, the actual question text is what's in the square brackets.
+                String[] answers = nextLine.Split(']')[1].Split(')')[0].Substring(2).Split(','); // The string with all the answers is gonna be within the parentheses, we can break it up into each one.
+                LinkedList<Answer> answerList = new LinkedList<Answer>(); // Init our answer list
+                Answer correct = null;
+                foreach (String a in answers) // For every answer in our little chunk of them provided:
                 { 
-                    if (a.Contains("*")) 
+                    if (a.Contains("*")) // If the answer has an asterisk at the end, then it's the correct one!
                     {
-                        answerList.AddLast(new Answer(a.Substring(1)));
-                        correct = new Answer(a.Substring(1), true);
+                        answerList.AddLast(new Answer(a.Trim().Substring(0, a.Trim().Length - 1), true)); // We'll still add it to the answer list, but we also wanna separate it as the correct one.
+                        correct = new Answer(a.Trim().Substring(0, a.Trim().Length - 1), true);
                     }
                     else
                     {
-                        answerList.AddLast(new Answer(a, false));
+                        answerList.AddLast(new Answer(a.Trim(), false));
                     }
                 }
-                this.Questons.Add(new Question(questionText, answerList, correctAnswer));
+                double difficulty = double.Parse(nextLine.Split('|')[1].Trim());
+                this.Questions.Add(new Question(questionText, difficulty, answerList, correct), difficulty);
             }
+            Console.WriteLine("Initialized topic " + this.name + " with " + this.Questions.Count + " questions.");
             
         }
     }
