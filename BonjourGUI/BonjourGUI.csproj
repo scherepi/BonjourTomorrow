@@ -84,6 +84,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmArts.resx">
+      <DependentUpon>frmArts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +145,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Adobe Express - file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-900591912-612x612.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

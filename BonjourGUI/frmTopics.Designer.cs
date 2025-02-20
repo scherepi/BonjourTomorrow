@@ -33,7 +33,7 @@
             // 
             // btn_Return
             // 
-            this.btn_Return.Image = global::BonjourGUI.Properties.Resources.back_icon;
+            this.btn_Return.Image = global::BonjourGUI.Properties.Resources.istockphoto_900591912_612x612;
             this.btn_Return.Location = new System.Drawing.Point(1, 376);
             this.btn_Return.Name = "btn_Return";
             this.btn_Return.Size = new System.Drawing.Size(75, 75);
