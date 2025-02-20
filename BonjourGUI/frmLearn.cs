@@ -57,5 +57,16 @@ namespace BonjourGUI
         {
             Application.Run(new frmTopics(this.ph, this.dh));
         }
+
+        private void btnAC_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Thread t = new Thread(new ThreadStart(ThreadACForm));
+            t.Start();
+        }
+        private void ThreadACForm()
+        {
+            Application.Run(new frmArts(this.ph, this.dh));
+        }
     }
 }

@@ -31,7 +31,7 @@ namespace BonjourGUI
         }
         private void ThreadHomeForm()
         {
-            Application.Run(new BonjourTomorrow());
+            Application.Run(new BonjourTomorrow(this.dh, this.ph));
         }
 
         private void btn_DataDebug_Click(object sender, EventArgs e)

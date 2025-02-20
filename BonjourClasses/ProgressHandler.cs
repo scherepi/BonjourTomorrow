@@ -40,6 +40,10 @@ namespace BonjourClasses
             // Just gotta check the value.
             return unlocks[unlock];
         }
+        public (bool, bool) getACUnlocks()
+        {
+            return (isUnlocked("Bakery"), isUnlocked("Louvre"));
+        }
         public void unlock(String unlock)
         {
             // Just gotta set the value!

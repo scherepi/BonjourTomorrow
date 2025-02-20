@@ -142,6 +142,7 @@
             this.btnAC.TabIndex = 17;
             this.btnAC.Text = "Arts and Culture";
             this.btnAC.UseVisualStyleBackColor = false;
+            this.btnAC.Click += new System.EventHandler(this.btnAC_Click);
             // 
             // frmLearn
             // 

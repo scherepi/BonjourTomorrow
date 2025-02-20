@@ -75,6 +75,7 @@ namespace BonjourGUI
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            this.dataHandler.saveProgress();
             Application.Exit();
         }
     }

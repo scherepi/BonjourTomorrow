@@ -110,5 +110,10 @@ namespace BonjourClasses
             }
             return list;
         }
+
+        public void saveProgress()
+        {
+            this.progressHandler.serializeData();
+        }
     }
 }
