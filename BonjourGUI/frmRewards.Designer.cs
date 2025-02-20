@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btn_Return = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btn_Return
@@ -41,14 +42,23 @@
             this.btn_Return.UseVisualStyleBackColor = true;
             this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.Location = new System.Drawing.Point(88, 85);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(620, 291);
+            this.panel1.TabIndex = 3;
+            // 
             // frmRewards
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Return);
             this.Name = "frmRewards";
-            this.Text = "frmRewards";
+            this.Text = "The Best Part!";
             this.ResumeLayout(false);
 
         }
@@ -56,5 +66,6 @@
         #endregion
 
         private System.Windows.Forms.Button btn_Return;
+        private System.Windows.Forms.Panel panel1;
     }
 }
