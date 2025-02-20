@@ -82,5 +82,9 @@ namespace BonjourClasses
             Console.WriteLine(JsonSerializer.Serialize(topicProgress));
             return finalData;
         }
+        public void printDebug()
+        {
+            Console.WriteLine(serializeData());
+        }
     }
 }

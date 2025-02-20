@@ -56,10 +56,15 @@ namespace BonjourClasses
                     Console.Error.WriteLine("Unable to find topics directory.");
                     throw new FileNotFoundException();
                 }
-                if (File.Exists(this.dataPath + "progressFile.json"))
+                if (File.Exists(this.dataPath + "\\progressFile.json"))
                 {
+                    Console.WriteLine("Found progress file at " + this.dataPath + "progressFile.json");
                     // Great, found our progress file. Let's make a new ProgressHandler object with it.
-                    this.progressHandler = new ProgressHandler(this, File.ReadAllText(this.dataPath + "progressFile.json"));
+                    this.progressHandler = loadProgress();
+                } else
+                {
+                    Console.Error.WriteLine("Unable to find progress file.");
+                    throw new FileNotFoundException();
                 }
             }
             else {

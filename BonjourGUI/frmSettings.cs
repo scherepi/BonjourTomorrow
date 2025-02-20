@@ -38,5 +38,10 @@ namespace BonjourGUI
         {
             this.dh.printDebug();
         }
+
+        private void btn_ProgDebug_Click(object sender, EventArgs e)
+        {
+            this.ph.printDebug();
+        }
     }
 }
