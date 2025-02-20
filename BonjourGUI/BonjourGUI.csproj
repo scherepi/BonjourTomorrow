@@ -64,11 +64,29 @@
     <Compile Include="frmLearn.Designer.cs">
       <DependentUpon>frmLearn.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMissed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMissed.Designer.cs">
+      <DependentUpon>frmMissed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReview.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmReview.Designer.cs">
       <DependentUpon>frmReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRewards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRewards.Designer.cs">
+      <DependentUpon>frmRewards.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSettings.cs">
       <SubType>Form</SubType>
@@ -93,8 +111,17 @@
     <EmbeddedResource Include="frmLearn.resx">
       <DependentUpon>frmLearn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMissed.resx">
+      <DependentUpon>frmMissed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReview.resx">
       <DependentUpon>frmReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRewards.resx">
+      <DependentUpon>frmRewards.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSettings.resx">
       <DependentUpon>frmSettings.cs</DependentUpon>

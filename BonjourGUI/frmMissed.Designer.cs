@@ -1,6 +1,6 @@
 ﻿namespace BonjourGUI
 {
-    partial class frmArts
+    partial class frmMissed
     {
         /// <summary>
         /// Required designer variable.
@@ -37,18 +37,18 @@
             this.btn_Return.Location = new System.Drawing.Point(-1, 377);
             this.btn_Return.Name = "btn_Return";
             this.btn_Return.Size = new System.Drawing.Size(75, 75);
-            this.btn_Return.TabIndex = 1;
+            this.btn_Return.TabIndex = 2;
             this.btn_Return.UseVisualStyleBackColor = true;
             this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
             // 
-            // frmArts
+            // frmMissed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_Return);
-            this.Name = "frmArts";
-            this.Text = "Explore the Arts!";
+            this.Name = "frmMissed";
+            this.Text = "Learn from Mistakes!";
             this.ResumeLayout(false);
 
         }

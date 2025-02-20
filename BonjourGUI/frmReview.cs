@@ -44,5 +44,38 @@ namespace BonjourGUI
         {
             Application.Run(new frmLearn(this.ph, this.dh));
         }
+
+        private void btnMissed_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Thread t = new Thread(new ThreadStart(ThreadMissedForm));
+            t.Start();
+        }
+        private void ThreadMissedForm()
+        {
+            Application.Run(new frmMissed(this.ph, this.dh));
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Thread t = new Thread(new ThreadStart(ThreadReportForm));
+            t.Start();
+        }
+        private void ThreadReportForm()
+        {
+            Application.Run(new frmReport(this.ph, this.dh));
+        }
+
+        private void btnRewards_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Thread t = new Thread(new ThreadStart(ThreadRewardsForm));
+            t.Start();
+        }
+        private void ThreadRewardsForm()
+        {
+            Application.Run(new frmRewards(this.ph, this.dh));
+        }
     }
 }

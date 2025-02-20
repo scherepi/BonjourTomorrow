@@ -35,6 +35,9 @@
             this.btnReview = new System.Windows.Forms.Button();
             this.btnLearn = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
+            this.btnRewards = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.btnMissed = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label4
@@ -109,12 +112,51 @@
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // btnRewards
+            // 
+            this.btnRewards.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
+            this.btnRewards.Font = new System.Drawing.Font("Itim", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRewards.Location = new System.Drawing.Point(124, 288);
+            this.btnRewards.Name = "btnRewards";
+            this.btnRewards.Size = new System.Drawing.Size(555, 78);
+            this.btnRewards.TabIndex = 24;
+            this.btnRewards.Text = "Rewards";
+            this.btnRewards.UseVisualStyleBackColor = false;
+            this.btnRewards.Click += new System.EventHandler(this.btnRewards_Click);
+            // 
+            // btnReport
+            // 
+            this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
+            this.btnReport.Font = new System.Drawing.Font("Itim", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Location = new System.Drawing.Point(122, 184);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(555, 78);
+            this.btnReport.TabIndex = 23;
+            this.btnReport.Text = "Progress Report";
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
+            // btnMissed
+            // 
+            this.btnMissed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
+            this.btnMissed.Font = new System.Drawing.Font("Itim", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMissed.Location = new System.Drawing.Point(124, 85);
+            this.btnMissed.Name = "btnMissed";
+            this.btnMissed.Size = new System.Drawing.Size(555, 78);
+            this.btnMissed.TabIndex = 22;
+            this.btnMissed.Text = "Missed Questions";
+            this.btnMissed.UseVisualStyleBackColor = false;
+            this.btnMissed.Click += new System.EventHandler(this.btnMissed_Click);
+            // 
             // frmReview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRewards);
+            this.Controls.Add(this.btnReport);
+            this.Controls.Add(this.btnMissed);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -138,5 +180,8 @@
         private System.Windows.Forms.Button btnReview;
         private System.Windows.Forms.Button btnLearn;
         private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnRewards;
+        private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.Button btnMissed;
     }
 }
