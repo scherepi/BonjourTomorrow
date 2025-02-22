@@ -33,6 +33,9 @@
             this.btn_DataDebug = new System.Windows.Forms.Button();
             this.lbl_Debug = new System.Windows.Forms.Label();
             this.btn_ProgDebug = new System.Windows.Forms.Button();
+            this.btnBakery = new System.Windows.Forms.Button();
+            this.btnFood = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Return
@@ -83,11 +86,44 @@
             this.btn_ProgDebug.UseVisualStyleBackColor = true;
             this.btn_ProgDebug.Click += new System.EventHandler(this.btn_ProgDebug_Click);
             // 
+            // btnBakery
+            // 
+            this.btnBakery.Location = new System.Drawing.Point(542, 285);
+            this.btnBakery.Name = "btnBakery";
+            this.btnBakery.Size = new System.Drawing.Size(75, 23);
+            this.btnBakery.TabIndex = 5;
+            this.btnBakery.Text = "Bakery";
+            this.btnBakery.UseVisualStyleBackColor = true;
+            this.btnBakery.Click += new System.EventHandler(this.btnBakery_Click);
+            // 
+            // btnFood
+            // 
+            this.btnFood.Location = new System.Drawing.Point(648, 285);
+            this.btnFood.Name = "btnFood";
+            this.btnFood.Size = new System.Drawing.Size(75, 23);
+            this.btnFood.TabIndex = 6;
+            this.btnFood.Text = "Food";
+            this.btnFood.UseVisualStyleBackColor = true;
+            this.btnFood.Click += new System.EventHandler(this.btnFood_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(648, 325);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.TabIndex = 7;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnFood);
+            this.Controls.Add(this.btnBakery);
             this.Controls.Add(this.btn_ProgDebug);
             this.Controls.Add(this.lbl_Debug);
             this.Controls.Add(this.btn_DataDebug);
@@ -107,5 +143,8 @@
         private System.Windows.Forms.Button btn_DataDebug;
         private System.Windows.Forms.Label lbl_Debug;
         private System.Windows.Forms.Button btn_ProgDebug;
+        private System.Windows.Forms.Button btnBakery;
+        private System.Windows.Forms.Button btnFood;
+        private System.Windows.Forms.Button btnReset;
     }
 }

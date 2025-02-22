@@ -111,9 +111,11 @@ namespace BonjourClasses
             return list;
         }
 
-        public void saveProgress()
+        public void saveProgress(ProgressHandler ph)
         {
-            this.progressHandler.serializeData();
+            String jsonData = ph.serializeData();
+            Console.WriteLine("Writing to file...");
+            File.WriteAllText(this.dataPath + "\\progressFile.json", jsonData);
         }
     }
 }

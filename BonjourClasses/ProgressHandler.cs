@@ -64,11 +64,13 @@ namespace BonjourClasses
         public void resetProgress()
         {
             // For testing purposes mostly, this'll wipe all progress.
-            foreach (String topic in topicProgress.Keys)
+            var topicKeys = new List<string>(topicProgress.Keys);
+            foreach (String topic in topicKeys)
             {
                 topicProgress[topic] = (0, topicProgress[topic].Item2); // Wipe all our completed questions back to 0 first.
             }
-            foreach (String unlock in unlocks.Keys)
+            var unlockKeys = new List<string>(unlocks.Keys);
+            foreach (String unlock in unlockKeys)
             {
                 unlocks[unlock] = false; // Then, set all our unlocks back to false.
             }
@@ -83,7 +85,24 @@ namespace BonjourClasses
             };
             finalData += "{\n\t";
             finalData += "\"topicProgress\": {\n";
-            Console.WriteLine(JsonSerializer.Serialize(topicProgress));
+            // Populate topicProgress object
+            foreach (String t in topicProgress.Keys)
+            {
+                finalData += "\t\t \"" + t + "\": {\n";
+                finalData += "\t\t\t\"Completed\": " + topicProgress[t].Item1 + ",\n";
+                finalData += "\t\t\t\"Total\": " + topicProgress[t].Item2 + "\n";
+                finalData += "\t\t },\n";
+            }
+            finalData = finalData.Substring(0, finalData.Length - 2) + "\n\t},\n";
+            finalData += "\t\"unlocks\": {\n";
+            // Populate unlocks object
+            foreach (String u in unlocks.Keys)
+            {
+                Console.WriteLine(u + " is " + unlocks[u]);
+                finalData += "\t\t\"" + u + "\": " + unlocks[u].ToString().ToLower() + ",\n";
+            }
+            finalData = finalData.Substring(0, finalData.Length - 2) + "\n\t}\n";
+            finalData += "}";
             return finalData;
         }
         public void printDebug()

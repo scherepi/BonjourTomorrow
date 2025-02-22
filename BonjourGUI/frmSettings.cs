@@ -43,5 +43,20 @@ namespace BonjourGUI
         {
             this.ph.printDebug();
         }
+
+        private void btnBakery_Click(object sender, EventArgs e)
+        {
+            this.ph.unlock("Bakery");
+        }
+
+        private void btnFood_Click(object sender, EventArgs e)
+        {
+            this.ph.progressTopic("Food");
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            this.ph.resetProgress();
+        }
     }
 }
