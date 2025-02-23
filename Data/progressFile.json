@@ -1,7 +1,7 @@
 {
 	"topicProgress": {
 		 "Food": {
-			"Completed": 5,
+			"Completed": 0,
 			"Total": 40
 		 },
 		 "Greetings": {
@@ -19,7 +19,7 @@
 	},
 	"unlocks": {
 		"Louvre": false,
-		"Bakery": true,
+		"Bakery": false,
 		"Eraser": false
 	}
 }
