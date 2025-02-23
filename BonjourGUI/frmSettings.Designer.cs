@@ -130,7 +130,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Return);
             this.Name = "frmSettings";
-            this.Text = "frmSettings";
+            this.Text = "Settings";
             this.ResumeLayout(false);
             this.PerformLayout();
 

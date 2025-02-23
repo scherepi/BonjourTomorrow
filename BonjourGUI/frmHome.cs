@@ -27,7 +27,13 @@ namespace BonjourGUI
             this.dataHandler = new DataHandler(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\..\\..\\..\\Data");
             this.dataHandler.initalizeData();
             this.progressHandler = dataHandler.loadProgress();
+            AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
         }
+
+        void OnProcessExit(object sender, EventArgs e)
+        {
+            this.dataHandler.saveProgress(this.progressHandler);
+        }   
 
         public BonjourTomorrow(DataHandler dataHandler, ProgressHandler progressHandler)
         {
@@ -75,7 +81,6 @@ namespace BonjourGUI
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.dataHandler.saveProgress(this.progressHandler);
             Application.Exit();
         }
     }
