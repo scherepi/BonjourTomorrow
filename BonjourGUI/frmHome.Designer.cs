@@ -150,6 +150,7 @@
             this.btn_quickStart.Size = new System.Drawing.Size(208, 208);
             this.btn_quickStart.TabIndex = 0;
             this.btn_quickStart.UseVisualStyleBackColor = false;
+            this.btn_quickStart.Click += new System.EventHandler(this.btn_quickStart_Click);
             // 
             // BonjourTomorrow
             // 

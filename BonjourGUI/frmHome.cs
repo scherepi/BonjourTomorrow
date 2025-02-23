@@ -27,7 +27,6 @@ namespace BonjourGUI
             InitializeComponent();
             // Initialize data, because it hasn't been initialized yet if we're using this constructor.
             this.dataHandler = new DataHandler(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\..\\..\\..\\Data");
-            this.dataHandler.initalizeData();
             this.progressHandler = dataHandler.loadProgress();
             AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
         }
@@ -84,6 +83,11 @@ namespace BonjourGUI
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btn_quickStart_Click(object sender, EventArgs e)
+        {
+            SessionHandler.startSession();
         }
     }
 }
