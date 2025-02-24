@@ -59,5 +59,16 @@ namespace BonjourGUI
         {
             this.ph.resetProgress();
         }
+
+        private void btnQuestionTest_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Thread t = new Thread(new ThreadStart(ThreadQuestionForm));
+            t.Start();
+        }
+        private void ThreadQuestionForm()
+        {
+            Application.Run(new frmQuestions(this.ph, this.dh, dh.topicList.ToArray()[0].getQuestions().ToArray()[0]));
+        }
     }
 }

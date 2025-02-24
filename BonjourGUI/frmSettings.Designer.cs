@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Return = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_DataDebug = new System.Windows.Forms.Button();
             this.lbl_Debug = new System.Windows.Forms.Label();
@@ -36,17 +35,9 @@
             this.btnBakery = new System.Windows.Forms.Button();
             this.btnFood = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.btn_Return = new System.Windows.Forms.Button();
+            this.btnQuestionTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btn_Return
-            // 
-            this.btn_Return.Image = global::BonjourGUI.Properties.Resources.istockphoto_900591912_612x612;
-            this.btn_Return.Location = new System.Drawing.Point(-1, 377);
-            this.btn_Return.Name = "btn_Return";
-            this.btn_Return.Size = new System.Drawing.Size(75, 75);
-            this.btn_Return.TabIndex = 0;
-            this.btn_Return.UseVisualStyleBackColor = true;
-            this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
             // 
             // label1
             // 
@@ -116,11 +107,32 @@
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // btn_Return
+            // 
+            this.btn_Return.Image = global::BonjourGUI.Properties.Resources.istockphoto_900591912_612x612;
+            this.btn_Return.Location = new System.Drawing.Point(-1, 377);
+            this.btn_Return.Name = "btn_Return";
+            this.btn_Return.Size = new System.Drawing.Size(75, 75);
+            this.btn_Return.TabIndex = 0;
+            this.btn_Return.UseVisualStyleBackColor = true;
+            this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
+            // 
+            // btnQuestionTest
+            // 
+            this.btnQuestionTest.Location = new System.Drawing.Point(542, 325);
+            this.btnQuestionTest.Name = "btnQuestionTest";
+            this.btnQuestionTest.Size = new System.Drawing.Size(75, 23);
+            this.btnQuestionTest.TabIndex = 8;
+            this.btnQuestionTest.Text = "Question";
+            this.btnQuestionTest.UseVisualStyleBackColor = true;
+            this.btnQuestionTest.Click += new System.EventHandler(this.btnQuestionTest_Click);
+            // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnQuestionTest);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnFood);
             this.Controls.Add(this.btnBakery);
@@ -146,5 +158,6 @@
         private System.Windows.Forms.Button btnBakery;
         private System.Windows.Forms.Button btnFood;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnQuestionTest;
     }
 }

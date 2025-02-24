@@ -28,6 +28,9 @@ namespace BonjourClasses
         {
             currentSession = new Session(t);
         }
+        public static void exitSession() {
+             
+        }
         public static void passHandler(DataHandler dh)
         {
             SessionHandler.dh = dh;

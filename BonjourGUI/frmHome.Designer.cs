@@ -39,6 +39,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btn_quickStart = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnHome
@@ -145,12 +146,23 @@
             this.btn_quickStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.btn_quickStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_quickStart.Image = global::BonjourGUI.Properties.Resources.Group_1;
-            this.btn_quickStart.Location = new System.Drawing.Point(118, 118);
+            this.btn_quickStart.Location = new System.Drawing.Point(50, 118);
             this.btn_quickStart.Name = "btn_quickStart";
             this.btn_quickStart.Size = new System.Drawing.Size(208, 208);
             this.btn_quickStart.TabIndex = 0;
             this.btn_quickStart.UseVisualStyleBackColor = false;
             this.btn_quickStart.Click += new System.EventHandler(this.btn_quickStart_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Itim", 25F);
+            this.label5.Location = new System.Drawing.Point(63, 329);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(187, 40);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Quick Start";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BonjourTomorrow
             // 
@@ -158,6 +170,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -189,6 +202,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label label5;
     }
 }
 
