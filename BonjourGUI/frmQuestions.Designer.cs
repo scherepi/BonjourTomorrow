@@ -150,6 +150,7 @@
             this.btnNext.Text = "→";
             this.btnNext.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // frmQuestions
             // 

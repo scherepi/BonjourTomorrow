@@ -89,7 +89,14 @@ namespace BonjourGUI
         private void btn_quickStart_Click(object sender, EventArgs e)
         {
             SessionHandler.startSession();
-            
+            this.Close();
+            Thread t = new Thread(new ThreadStart(ThreadQuestionsForm));
+            t.Start();
         }
+        private void ThreadQuestionsForm()
+        {
+            Application.Run(new frmQuestions(this.progressHandler, this.dataHandler, SessionHandler.getNextQuestion()));
+        }
+
     }
 }

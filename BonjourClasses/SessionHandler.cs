@@ -36,6 +36,7 @@ namespace BonjourClasses
         }
         public static Question getNextQuestion()
         {
+            Console.WriteLine("Retrieving next question in session.");
             if (currentSession != null)
             {
                 return currentSession.getNextQuestion();
@@ -47,10 +48,12 @@ namespace BonjourClasses
         }
         public static String getSessionProgress()
         {
+            Console.WriteLine("Returning session progress " + currentSession.getProgress());
             return currentSession.getProgress();
         }
         public static void passHandler(DataHandler dh)
         {
+            Console.WriteLine("SessionHandler receiving DataHandler.");
             SessionHandler.dh = dh;
         }
         public static uint getNextID()

@@ -82,21 +82,21 @@ namespace BonjourGUI
 
         private void btnOptionOne_Click(object sender, EventArgs e)
         {
-            reactToInput(question.submitAnswer(answers[0]));
+            reactToInput(answers[0].isCorrect());
         }
         private void btnOptionTwo_Click(object sender, EventArgs e)
         {
-            reactToInput(question.submitAnswer(answers[1]));
+            reactToInput(answers[1].isCorrect());
         }
 
         private void btnOptionThree_Click(object sender, EventArgs e)
         {
-            reactToInput(question.submitAnswer(answers[2]));
+            reactToInput(answers[2].isCorrect());
         }
 
         private void btnOptionFour_Click(object sender, EventArgs e)
         {
-            reactToInput(question.submitAnswer(answers[3]));
+            reactToInput(answers[3].isCorrect());
         }
         private void reactToInput(bool correct)
         {
@@ -114,6 +114,13 @@ namespace BonjourGUI
             btnOptionTwo.Enabled = false;
             btnOptionThree.Enabled = false;
             btnOptionFour.Enabled = false;
+            btnNext.Visible = true;
+            btnNext.Enabled = true;
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            Question nextQuestion = SessionHandler.getNextQuestion();
         }
     }
 }

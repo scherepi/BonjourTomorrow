@@ -40,12 +40,9 @@ namespace BonjourClasses
                     return null;
                 }
             }
-        public void submitAnswer(Answer a)
+        public void incrementCorrect()
         {
-            if (a.isCorrect())
-            {
-                this.currentCorrect++;
-            }
+            this.currentCorrect++;
         }
         public string getProgress()
         {
