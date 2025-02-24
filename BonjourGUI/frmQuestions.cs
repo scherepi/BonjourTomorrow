@@ -16,20 +16,25 @@ namespace BonjourGUI
         DataHandler dh;
         ProgressHandler ph;
         Question question;
+        Answer[] answers;
         public frmQuestions(ProgressHandler ph, DataHandler dh, Question question)
         {
+            // We need access to the handlers, and we need to populate the form according to the question.
             InitializeComponent();
             this.ph = ph;
             this.dh = dh;
             this.question = question;
             lblQuestionText.Text = question.getText();
-            Answer[] answers = question.getAnswers().ToArray();
+            lblFeedback.Text = "";
+            btnNext.Visible = false;
+            btnNext.Enabled = false;
+            answers = question.getAnswers().ToArray();
             btnOptionOne.Text = answers[0].getText();
             btnOptionTwo.Text = answers[1].getText();
             btnOptionThree.Text = answers[2].getText();
             btnOptionFour.Text = answers[3].getText();
         }
-
+        // The functions below are just to make the buttons react to the user's mouse hovering.
         private void btnOptionOne_MouseEnter(object sender, EventArgs e)
         {
             btnOptionOne.BackColor = Color.FromName("Green");
@@ -73,6 +78,42 @@ namespace BonjourGUI
             SessionHandler.exitSession();
             this.Close();
             // TODO: implement report screen
+        }
+
+        private void btnOptionOne_Click(object sender, EventArgs e)
+        {
+            reactToInput(question.submitAnswer(answers[0]));
+        }
+        private void btnOptionTwo_Click(object sender, EventArgs e)
+        {
+            reactToInput(question.submitAnswer(answers[1]));
+        }
+
+        private void btnOptionThree_Click(object sender, EventArgs e)
+        {
+            reactToInput(question.submitAnswer(answers[2]));
+        }
+
+        private void btnOptionFour_Click(object sender, EventArgs e)
+        {
+            reactToInput(question.submitAnswer(answers[3]));
+        }
+        private void reactToInput(bool correct)
+        {
+            if (correct)
+            {
+                lblFeedback.Text = "Correct!";
+                lblFeedback.ForeColor = Color.FromName("Green");
+            }
+            else
+            {
+                lblFeedback.Text = "Incorrect!";
+                lblFeedback.ForeColor = Color.FromName("Red");
+            }
+            btnOptionOne.Enabled = false;
+            btnOptionTwo.Enabled = false;
+            btnOptionThree.Enabled = false;
+            btnOptionFour.Enabled = false;
         }
     }
 }

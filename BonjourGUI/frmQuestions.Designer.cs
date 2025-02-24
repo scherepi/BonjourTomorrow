@@ -35,6 +35,8 @@
             this.btnOptionThree = new System.Windows.Forms.Button();
             this.btnOptionFour = new System.Windows.Forms.Button();
             this.lblProgress = new System.Windows.Forms.Label();
+            this.lblFeedback = new System.Windows.Forms.Label();
+            this.btnNext = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblQuestionText
@@ -70,6 +72,7 @@
             this.btnOptionOne.TabIndex = 2;
             this.btnOptionOne.Text = "Answer 1";
             this.btnOptionOne.UseVisualStyleBackColor = false;
+            this.btnOptionOne.Click += new System.EventHandler(this.btnOptionOne_Click);
             this.btnOptionOne.MouseEnter += new System.EventHandler(this.btnOptionOne_MouseEnter);
             this.btnOptionOne.MouseLeave += new System.EventHandler(this.btnOptionOne_MouseLeave);
             // 
@@ -83,6 +86,7 @@
             this.btnOptionTwo.TabIndex = 3;
             this.btnOptionTwo.Text = "Answer 2";
             this.btnOptionTwo.UseVisualStyleBackColor = false;
+            this.btnOptionTwo.Click += new System.EventHandler(this.btnOptionTwo_Click);
             this.btnOptionTwo.MouseEnter += new System.EventHandler(this.btnOptionTwo_MouseEnter);
             this.btnOptionTwo.MouseLeave += new System.EventHandler(this.btnOptionTwo_MouseLeave);
             // 
@@ -96,6 +100,7 @@
             this.btnOptionThree.TabIndex = 4;
             this.btnOptionThree.Text = "Answer 3";
             this.btnOptionThree.UseVisualStyleBackColor = false;
+            this.btnOptionThree.Click += new System.EventHandler(this.btnOptionThree_Click);
             this.btnOptionThree.MouseEnter += new System.EventHandler(this.btnOptionThree_MouseEnter);
             this.btnOptionThree.MouseLeave += new System.EventHandler(this.btnOptionThree_MouseLeave);
             // 
@@ -109,6 +114,7 @@
             this.btnOptionFour.TabIndex = 5;
             this.btnOptionFour.Text = "Answer 4";
             this.btnOptionFour.UseVisualStyleBackColor = false;
+            this.btnOptionFour.Click += new System.EventHandler(this.btnOptionFour_Click);
             this.btnOptionFour.MouseEnter += new System.EventHandler(this.btnOptionFour_MouseEnter);
             this.btnOptionFour.MouseLeave += new System.EventHandler(this.btnOptionFour_MouseLeave);
             // 
@@ -122,11 +128,36 @@
             this.lblProgress.TabIndex = 6;
             this.lblProgress.Text = "0/20";
             // 
+            // lblFeedback
+            // 
+            this.lblFeedback.AutoSize = true;
+            this.lblFeedback.Font = new System.Drawing.Font("Itim", 15F);
+            this.lblFeedback.ForeColor = System.Drawing.Color.Red;
+            this.lblFeedback.Location = new System.Drawing.Point(343, 400);
+            this.lblFeedback.Name = "lblFeedback";
+            this.lblFeedback.Size = new System.Drawing.Size(131, 24);
+            this.lblFeedback.TabIndex = 7;
+            this.lblFeedback.Text = "Question Text";
+            this.lblFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnNext
+            // 
+            this.btnNext.Font = new System.Drawing.Font("Lucida Sans", 40F);
+            this.btnNext.Location = new System.Drawing.Point(688, 194);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 75);
+            this.btnNext.TabIndex = 8;
+            this.btnNext.Text = "→";
+            this.btnNext.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnNext.UseVisualStyleBackColor = true;
+            // 
             // frmQuestions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.lblFeedback);
             this.Controls.Add(this.lblProgress);
             this.Controls.Add(this.btnOptionFour);
             this.Controls.Add(this.btnOptionThree);
@@ -150,5 +181,7 @@
         private System.Windows.Forms.Button btnOptionThree;
         private System.Windows.Forms.Button btnOptionFour;
         private System.Windows.Forms.Label lblProgress;
+        private System.Windows.Forms.Label lblFeedback;
+        private System.Windows.Forms.Button btnNext;
     }
 }

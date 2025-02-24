@@ -16,6 +16,7 @@ namespace BonjourClasses
         private static uint nextID = 0;
         public static void startSession()
         {
+            Console.WriteLine("Starting new session with no arguments");
             if (dh != null) { 
                 currentSession = new Session(dh.getQuickQuestions());
             } else
@@ -26,9 +27,11 @@ namespace BonjourClasses
         }
         public static void startSession(Topic t)
         {
+            Console.WriteLine("Starting new session for topic " + t.getName());
             currentSession = new Session(t);
         }
         public static void exitSession() {
+            Console.WriteLine("Exiting session.");
             currentSession = null;
         }
         public static Question getNextQuestion()
