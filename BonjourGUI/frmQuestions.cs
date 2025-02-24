@@ -67,5 +67,12 @@ namespace BonjourGUI
         {
             btnOptionFour.BackColor = Color.FromArgb(77, 175, 72);
         }
+
+        private void btn_Return_Click(object sender, EventArgs e)
+        {
+            SessionHandler.exitSession();
+            this.Close();
+            // TODO: implement report screen
+        }
     }
 }

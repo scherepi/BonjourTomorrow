@@ -57,6 +57,7 @@
             this.btn_Return.Size = new System.Drawing.Size(75, 75);
             this.btn_Return.TabIndex = 1;
             this.btn_Return.UseVisualStyleBackColor = true;
+            this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
             // 
             // btnOptionOne
             // 

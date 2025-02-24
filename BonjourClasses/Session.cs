@@ -47,6 +47,10 @@ namespace BonjourClasses
                 this.currentCorrect++;
             }
         }
+        public string getProgress()
+        {
+            return this.currentCorrect + "/" + this.totalQuestions;
+        }
     }
     
 }

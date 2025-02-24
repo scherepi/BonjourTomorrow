@@ -29,7 +29,22 @@ namespace BonjourClasses
             currentSession = new Session(t);
         }
         public static void exitSession() {
-             
+            currentSession = null;
+        }
+        public static Question getNextQuestion()
+        {
+            if (currentSession != null)
+            {
+                return currentSession.getNextQuestion();
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public static String getSessionProgress()
+        {
+            return currentSession.getProgress();
         }
         public static void passHandler(DataHandler dh)
         {

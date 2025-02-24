@@ -88,6 +88,7 @@ namespace BonjourGUI
         private void btn_quickStart_Click(object sender, EventArgs e)
         {
             SessionHandler.startSession();
+            
         }
     }
 }
