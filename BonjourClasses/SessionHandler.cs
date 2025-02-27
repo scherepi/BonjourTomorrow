@@ -34,6 +34,11 @@ namespace BonjourClasses
             Console.WriteLine("Exiting session.");
             currentSession = null;
         }
+        public static void reportCorrect()
+        {
+            Console.WriteLine("Question answered correctly.");
+            currentSession.incrementCorrect();
+        }
         public static Question getNextQuestion()
         {
             Console.WriteLine("Retrieving next question in session.");

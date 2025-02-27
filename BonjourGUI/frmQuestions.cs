@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BonjourClasses;
@@ -104,6 +105,7 @@ namespace BonjourGUI
             {
                 lblFeedback.Text = "Correct!";
                 lblFeedback.ForeColor = Color.FromName("Green");
+                SessionHandler.reportCorrect();
             }
             else
             {
@@ -120,7 +122,13 @@ namespace BonjourGUI
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            Question nextQuestion = SessionHandler.getNextQuestion();
+            this.Close();
+            Thread t = new Thread(new ThreadStart(ThreadNextQuestion));
+            t.Start();
+        }
+        private void ThreadNextQuestion()
+        {
+            Application.Run(new frmQuestions(this.ph, this.dh, SessionHandler.getNextQuestion()));
         }
     }
 }

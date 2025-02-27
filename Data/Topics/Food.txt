@@ -1,2 +1,11 @@
 [How do you say "coffee" in French?] (cafe*, caffee, te, kofi) | 4.0
 [What's the word for "bread" in French?] (pao, pan, pain*, baguette) | 3.2
+[How do you say "cheese" in French?] (fromage*, queso, queijo, formaggio) | 4.0
+[What's the word for "milk" in French?] (leite, lait*, leche, latte) | 3.8
+[How do you say "water" in French?] (agua, eau*, acqua, wasser) | 4.0
+[What's the word for "wine" in French?] (vin*, vino, vinho, wino) | 4.0
+[How do you say "beer" in French?] (cerveza, biere*, birra, bier) | 4.0
+[What's the word for "chocolate" in French?] (chocolate, chocolat*, cioccolato, schokolade) | 4.0
+[How do you say "apple" in French?] (manzana, pomme*, mela, apfel) | 4.0
+[What's the word for "banana" in French?] (banana*, banane, banana, banano) | 4.0
+[How do you say "orange" in French?] (naranja, orange*, arancia, orang) | 4.0
