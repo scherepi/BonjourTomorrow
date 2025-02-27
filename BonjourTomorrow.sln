@@ -14,7 +14,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{2592CC7E-0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Topics", "Topics", "{FA9981B2-9909-4B76-B2F4-8CBDFB5A1EEA}"
 	ProjectSection(SolutionItems) = preProject
+		Data\Topics\Business.txt = Data\Topics\Business.txt
 		Data\Topics\Food.txt = Data\Topics\Food.txt
+		Data\Topics\Numbers.txt = Data\Topics\Numbers.txt
 	EndProjectSection
 EndProject
 Global
