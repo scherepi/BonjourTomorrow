@@ -77,6 +77,7 @@ namespace BonjourClasses
         }
         public ProgressHandler loadProgress()
         {
+            // Returns a ProgressHandler object with the data loaded from the progress file.
             String progressFile = this.dataPath + "\\progressFile.json";
             Console.WriteLine("Trying to read from " + progressFile);
             if (File.Exists(progressFile)) {
@@ -115,6 +116,7 @@ namespace BonjourClasses
 
         public void saveProgress(ProgressHandler ph)
         {
+            // Write the progress handler's data to the progress file.
             String jsonData = ph.serializeData();
             Console.WriteLine("Writing to file...");
             File.WriteAllText(this.dataPath + "\\progressFile.json", jsonData);

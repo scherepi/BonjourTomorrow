@@ -11,11 +11,12 @@ namespace BonjourClasses
 {
     public static class SessionHandler
     {
-        public static Session currentSession = null;
-        public static DataHandler dh = null;
-        private static uint nextID = 0;
+        public static Session currentSession = null;    // The current session to be handled.
+        public static DataHandler dh = null;            // The program's DataHandler.
+        private static uint nextID = 0;                 // Counter for unique question IDs.
         public static void startSession()
         {
+            // Starts a new session with no arguments, using the DataHandler's getQuickQuestions method.
             Console.WriteLine("Starting new session with no arguments");
             if (dh != null) { 
                 currentSession = new Session(dh.getQuickQuestions());
@@ -27,6 +28,7 @@ namespace BonjourClasses
         }
         public static void startSession(String topicString)
         {
+            // Starts a new session with a given topic name.
             Console.WriteLine("Asking DataHandler for the topic with name " + topicString);
             Topic topic = dh.getTopic(topicString);
             Console.WriteLine((topic == null) ? "Failed to find topic." : "Found topic.");
@@ -35,10 +37,13 @@ namespace BonjourClasses
         }
         public static void startSession(Topic t)
         {
+            // Starts a new session with a given topic object, populating the session with questions of that topic.
             Console.WriteLine("Starting new session for topic " + t.getName());
             currentSession = new Session(t);
         }
         public static void exitSession() {
+            // Exits the current session.
+            // TODO: Save functionality?
             Console.WriteLine("Exiting session.");
             currentSession = null;
         }
@@ -66,11 +71,13 @@ namespace BonjourClasses
         }
         public static void passHandler(DataHandler dh)
         {
+            // This is how we get access to the DataHandler, since we're a static class without constructors.
             Console.WriteLine("SessionHandler receiving DataHandler.");
             SessionHandler.dh = dh;
         }
         public static uint getNextID()
         {
+            // Returns the next unique question ID.
             uint current = nextID;
             nextID++;
             return current;

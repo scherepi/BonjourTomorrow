@@ -27,18 +27,23 @@ namespace BonjourGUI
             InitializeComponent();
             // Initialize data, because it hasn't been initialized yet if we're using this constructor.
             this.dataHandler = new DataHandler(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\..\\..\\..\\Data");
-            this.progressHandler = dataHandler.loadProgress();
+            // Initialize our ProgressHandler from the DataHandler
+            this.progressHandler = dataHandler.loadProgress(); 
+            // Pass the data handler to the session handler. (It kinda needs to access data.)
             SessionHandler.passHandler(dataHandler);
+            // Very important!! This adds auto-save on exit.
             AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
         }
 
         void OnProcessExit(object sender, EventArgs e)
         {
+            // Save progress; this is called when the program exits.
             this.dataHandler.saveProgress(this.progressHandler);
         }   
 
         public BonjourTomorrow(DataHandler dataHandler, ProgressHandler progressHandler)
         {
+            // This constructor is used when we're returning to the Home page from any other page, so that we don't have to do all the initialization again.
             Console.WriteLine("Home received handlers");
             InitializeComponent();
             // Use the handlers we've previously initialized for the program, passed back to us!
@@ -88,9 +93,9 @@ namespace BonjourGUI
 
         private void btn_quickStart_Click(object sender, EventArgs e)
         {
-            SessionHandler.startSession();
+            SessionHandler.startSession(); // Start a basic randomized session with no arguments.
             this.Close();
-            Thread t = new Thread(new ThreadStart(ThreadQuestionsForm));
+            Thread t = new Thread(new ThreadStart(ThreadQuestionsForm)); // Enter the session.
             t.Start();
         }
         private void ThreadQuestionsForm()

@@ -10,17 +10,17 @@ namespace BonjourClasses
 {
     public class Question
     {
-        public LinkedList<Answer> answers;
-        public Answer correctAnswer;
-        public String text;
-        public uint questionID;
-        public double difficulty;
-        public (int, int) prevAttempts;
+        public LinkedList<Answer> answers;  // Stores the related answers
+        public Answer correctAnswer;        // Stores the correct answer specifically (DEPRECATED?)
+        public String text;                 // The question text.
+        public uint questionID;             // A unique identifier for the question, assigned by the SessionHandler
+        public double difficulty;           // A double representing the difficulty of the question.
+        public (int, int) prevAttempts;     // Holds the previous attempts for the question.
 
         public Question(String text, double difficulty, LinkedList<Answer> answers, Answer correctAnswer)
         {
             this.text = text;
-            this.questionID = SessionHandler.getNextID();
+            this.questionID = SessionHandler.getNextID(); // Grab the next available unique id from our static SessionHandler.
             this.difficulty = difficulty;
             this.answers = answers;
             this.correctAnswer = correctAnswer;

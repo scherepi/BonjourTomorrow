@@ -10,9 +10,9 @@ namespace BonjourClasses
 {
     public class ProgressHandler
     {
-        public DataHandler parent;
-        public Dictionary<String, (int, int)> topicProgress;
-        public Dictionary<String, bool> unlocks;
+        public DataHandler parent;                              // The DataHandler that created this ProgressHandler.
+        public Dictionary<String, (int, int)> topicProgress;    // A dictionary of topics and their progress.
+        public Dictionary<String, bool> unlocks;                // A dictionary of unlocks and their status.
 
         public ProgressHandler(DataHandler parent, String progressFile)
         {
