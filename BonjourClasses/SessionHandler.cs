@@ -25,6 +25,14 @@ namespace BonjourClasses
             }
             
         }
+        public static void startSession(String topicString)
+        {
+            Console.WriteLine("Asking DataHandler for the topic with name " + topicString);
+            Topic topic = dh.getTopic(topicString);
+            Console.WriteLine((topic == null) ? "Failed to find topic." : "Found topic.");
+            startSession(topic);
+            Console.WriteLine("Session started with topic " + topicString);
+        }
         public static void startSession(Topic t)
         {
             Console.WriteLine("Starting new session for topic " + t.getName());

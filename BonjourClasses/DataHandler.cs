@@ -48,7 +48,9 @@ namespace BonjourClasses
                     {
                         // add to our master topic list the created Topic object, passing the file's name and its contents
                         Console.WriteLine("Found topic file: " + file);
-                        this.topicList.AddLast(new Topic(file, File.ReadAllText(file)));
+                        String topicName = file.Substring(file.LastIndexOf("\\") + 1);
+                        topicName = topicName.Substring(0, topicName.Length - 4);
+                        this.topicList.AddLast(new Topic(topicName, File.ReadAllText(file)));
                     }
                 }
                 else {

@@ -32,5 +32,41 @@ namespace BonjourGUI
         private void returnToLearn() {
             Application.Run(new frmLearn(this.ph, this.dh));
         }
+        private void ThreadQuestionsForm()
+        {
+            Application.Run(new frmQuestions(this.ph, this.dh, SessionHandler.getNextQuestion()));
+        }
+
+        private void btnGreetings_Click(object sender, EventArgs e)
+        {
+            SessionHandler.startSession("Greetings");
+            this.Close();
+            Thread t = new Thread(new ThreadStart(ThreadQuestionsForm));
+            t.Start();
+        }
+
+        private void btnFood_Click(object sender, EventArgs e)
+        {
+            SessionHandler.startSession("Food");
+            this.Close();
+            Thread t = new Thread(new ThreadStart(ThreadQuestionsForm));
+            t.Start();
+        }
+
+        private void btnBusiness_Click(object sender, EventArgs e)
+        {
+            SessionHandler.startSession("Business");
+            this.Close();
+            Thread t = new Thread(new ThreadStart(ThreadQuestionsForm));
+            t.Start();
+        }
+
+        private void btnNumbers_Click(object sender, EventArgs e)
+        {
+            SessionHandler.startSession("Numbers");
+            this.Close();
+            Thread t = new Thread(new ThreadStart(ThreadQuestionsForm));
+            t.Start();
+        }
     }
 }
