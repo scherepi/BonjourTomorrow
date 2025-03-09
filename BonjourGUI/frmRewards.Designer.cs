@@ -37,11 +37,14 @@
             this.lbl_GreetingsValue = new System.Windows.Forms.Label();
             this.lbl_BusinessValue = new System.Windows.Forms.Label();
             this.lbl_NumValue = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_ChatIcon = new System.Windows.Forms.Label();
             this.lbl_Fork = new System.Windows.Forms.Label();
             this.btn_Return = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_BKey = new System.Windows.Forms.Label();
+            this.lbl_LKey = new System.Windows.Forms.Label();
+            this.lbl_Eraser = new System.Windows.Forms.Label();
             this.pnl_Buttons.SuspendLayout();
             this.pnl_Values.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +52,9 @@
             // pnl_Buttons
             // 
             this.pnl_Buttons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pnl_Buttons.Controls.Add(this.lbl_Eraser);
+            this.pnl_Buttons.Controls.Add(this.lbl_LKey);
+            this.pnl_Buttons.Controls.Add(this.lbl_BKey);
             this.pnl_Buttons.Controls.Add(this.btn_Eraser);
             this.pnl_Buttons.Controls.Add(this.btn_Louvre);
             this.pnl_Buttons.Controls.Add(this.btn_Bakery);
@@ -59,12 +65,13 @@
             // 
             // btn_Bakery
             // 
+            this.btn_Bakery.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_Bakery.Location = new System.Drawing.Point(13, 14);
             this.btn_Bakery.Name = "btn_Bakery";
             this.btn_Bakery.Size = new System.Drawing.Size(59, 48);
             this.btn_Bakery.TabIndex = 0;
             this.btn_Bakery.Text = "Bakery Key";
-            this.btn_Bakery.UseVisualStyleBackColor = true;
+            this.btn_Bakery.UseVisualStyleBackColor = false;
             // 
             // btn_Louvre
             // 
@@ -111,6 +118,7 @@
             this.lbl_FoodValue.Size = new System.Drawing.Size(61, 40);
             this.lbl_FoodValue.TabIndex = 1;
             this.lbl_FoodValue.Text = "##";
+            this.lbl_FoodValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_GreetingsValue
             // 
@@ -123,6 +131,7 @@
             this.lbl_GreetingsValue.Size = new System.Drawing.Size(61, 40);
             this.lbl_GreetingsValue.TabIndex = 2;
             this.lbl_GreetingsValue.Text = "##";
+            this.lbl_GreetingsValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_BusinessValue
             // 
@@ -135,6 +144,7 @@
             this.lbl_BusinessValue.Size = new System.Drawing.Size(61, 40);
             this.lbl_BusinessValue.TabIndex = 3;
             this.lbl_BusinessValue.Text = "##";
+            this.lbl_BusinessValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_NumValue
             // 
@@ -147,6 +157,17 @@
             this.lbl_NumValue.Size = new System.Drawing.Size(61, 40);
             this.lbl_NumValue.TabIndex = 4;
             this.lbl_NumValue.Text = "##";
+            this.lbl_NumValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Image = global::BonjourGUI.Properties.Resources.nums;
+            this.label2.Location = new System.Drawing.Point(343, 4);
+            this.label2.MinimumSize = new System.Drawing.Size(44, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 47);
+            this.label2.TabIndex = 7;
             // 
             // label1
             // 
@@ -188,15 +209,32 @@
             this.btn_Return.UseVisualStyleBackColor = true;
             this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
             // 
-            // label2
+            // lbl_BKey
             // 
-            this.label2.AutoSize = true;
-            this.label2.Image = global::BonjourGUI.Properties.Resources.nums;
-            this.label2.Location = new System.Drawing.Point(343, 4);
-            this.label2.MinimumSize = new System.Drawing.Size(44, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 47);
-            this.label2.TabIndex = 7;
+            this.lbl_BKey.AutoSize = true;
+            this.lbl_BKey.Location = new System.Drawing.Point(29, 65);
+            this.lbl_BKey.Name = "lbl_BKey";
+            this.lbl_BKey.Size = new System.Drawing.Size(28, 13);
+            this.lbl_BKey.TabIndex = 3;
+            this.lbl_BKey.Text = "15 F";
+            // 
+            // lbl_LKey
+            // 
+            this.lbl_LKey.AutoSize = true;
+            this.lbl_LKey.Location = new System.Drawing.Point(87, 65);
+            this.lbl_LKey.Name = "lbl_LKey";
+            this.lbl_LKey.Size = new System.Drawing.Size(42, 13);
+            this.lbl_LKey.TabIndex = 4;
+            this.lbl_LKey.Text = "12F 7G";
+            // 
+            // lbl_Eraser
+            // 
+            this.lbl_Eraser.AutoSize = true;
+            this.lbl_Eraser.Location = new System.Drawing.Point(159, 65);
+            this.lbl_Eraser.Name = "lbl_Eraser";
+            this.lbl_Eraser.Size = new System.Drawing.Size(24, 13);
+            this.lbl_Eraser.TabIndex = 5;
+            this.lbl_Eraser.Text = "8 N";
             // 
             // frmRewards
             // 
@@ -209,6 +247,7 @@
             this.Name = "frmRewards";
             this.Text = "The Best Part!";
             this.pnl_Buttons.ResumeLayout(false);
+            this.pnl_Buttons.PerformLayout();
             this.pnl_Values.ResumeLayout(false);
             this.pnl_Values.PerformLayout();
             this.ResumeLayout(false);
@@ -231,5 +270,8 @@
         private System.Windows.Forms.Label lbl_FoodValue;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_Eraser;
+        private System.Windows.Forms.Label lbl_LKey;
+        private System.Windows.Forms.Label lbl_BKey;
     }
 }

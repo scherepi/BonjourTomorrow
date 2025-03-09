@@ -70,5 +70,10 @@ namespace BonjourGUI
         {
             Application.Run(new frmQuestions(this.ph, this.dh, dh.topicList.ToArray()[0].getQuestions().ToArray()[0]));
         }
+
+        private void btn_Max_Click(object sender, EventArgs e)
+        {
+            this.ph.maxOut();
+        }
     }
 }

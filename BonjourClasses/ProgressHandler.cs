@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -80,6 +79,20 @@ namespace BonjourClasses
             foreach (String unlock in unlockKeys)
             {
                 unlocks[unlock] = false; // Then, set all our unlocks back to false.
+            }
+        }
+        public void maxOut()
+        {
+            // For debugging, maxes out all values
+            var topicKeys = new List<string>(topicProgress.Keys);
+            foreach (String topic in topicKeys)
+            {
+                topicProgress[topic] = (topicProgress[topic].Item2, topicProgress[topic].Item2);
+            }
+            var unlockKeys = new List<string>(unlocks.Keys);
+            foreach (String unlock in unlockKeys)
+            {
+                unlocks[unlock] = true;
             }
         }
         public String serializeData()

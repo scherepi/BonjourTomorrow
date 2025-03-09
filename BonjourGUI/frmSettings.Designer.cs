@@ -37,6 +37,7 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btn_Return = new System.Windows.Forms.Button();
             this.btnQuestionTest = new System.Windows.Forms.Button();
+            this.btn_Max = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -127,11 +128,22 @@
             this.btnQuestionTest.UseVisualStyleBackColor = true;
             this.btnQuestionTest.Click += new System.EventHandler(this.btnQuestionTest_Click);
             // 
+            // btn_Max
+            // 
+            this.btn_Max.Location = new System.Drawing.Point(599, 354);
+            this.btn_Max.Name = "btn_Max";
+            this.btn_Max.Size = new System.Drawing.Size(75, 23);
+            this.btn_Max.TabIndex = 9;
+            this.btn_Max.Text = "Maxout";
+            this.btn_Max.UseVisualStyleBackColor = true;
+            this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
+            // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_Max);
             this.Controls.Add(this.btnQuestionTest);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnFood);
@@ -159,5 +171,6 @@
         private System.Windows.Forms.Button btnFood;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnQuestionTest;
+        private System.Windows.Forms.Button btn_Max;
     }
 }
