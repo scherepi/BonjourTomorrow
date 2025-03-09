@@ -1,11 +1,35 @@
-[How do you say "coffee" in French?] (cafe*, caffee, te, kofi) | 4.0
-[What's the word for "bread" in French?] (pao, pan, pain*, baguette) | 3.2
-[How do you say "cheese" in French?] (fromage*, queso, queijo, formaggio) | 4.0
-[What's the word for "milk" in French?] (leite, lait*, leche, latte) | 3.8
-[How do you say "water" in French?] (agua, eau*, acqua, wasser) | 4.0
-[What's the word for "wine" in French?] (vin*, vino, vinho, wino) | 4.0
-[How do you say "beer" in French?] (cerveza, biere*, birra, bier) | 4.0
-[What's the word for "chocolate" in French?] (chocolate, chocolat*, cioccolato, schokolade) | 4.0
-[How do you say "apple" in French?] (manzana, pomme*, mela, apfel) | 4.0
-[What's the word for "banana" in French?] (banana*, banane, banana, banano) | 4.0
-[How do you say "orange" in French?] (naranja, orange*, arancia, orang) | 4.0
+[How do you say "coffee" in French?] (cafe*, caffee, te, kofi) | 4.0 F-00
+[What's the word for "bread" in French?] (pao, pan, pain*, baguette) | 3.2 F-01
+[How do you say "cheese" in French?] (fromage*, queso, queijo, formaggio) | 4.0 F-02
+[What's the word for "milk" in French?] (leite, lait*, leche, latte) | 3.8 F-03
+[How do you say "water" in French?] (agua, eau*, acqua, wasser) | 4.0 F-04
+[What's the word for "wine" in French?] (vin*, vino, vinho, wino) | 4.0 F-05
+[How do you say "beer" in French?] (cerveza, biere*, birra, bier) | 4.0 F-06
+[What's the word for "chocolate" in French?] (chocolate, chocolat*, cioccolato, schokolade) | 4.0 F-07
+[How do you say "apple" in French?] (manzana, pomme*, mela, apfel) | 4.0 F-08
+[What's the word for "banana" in French?] (banana*, banane, banana, banano) | 4.0 F-09
+[How do you say "orange" in French?] (naranja, orange*, arancia, orang) | 4.0 F-0A
+[What's the word for "grape" in French?] (uva, raisin*, uva, traube) | 4.0 F-0B
+[How do you say "strawberry" in French?] (fresa, fraise*, fragola, erdbeere) | 4.0 F-0C
+[What's the word for "carrot" in French?] (carotte*, zanahoria, carota, karotte) | 4.0 F-0D
+[How do you say "potato" in French?] (patata, pomme de terre*, patata, kartoffel) | 4.0 F-0E
+[What's the word for "onion" in French?] (cebolla, oignon*, cipolla, zwiebel) | 3.5 F-0F
+[How do you say "garlic" in French?] (ajo, ail*, aglio, knoblauch) | 4.0 F-10
+[What's the word for "pepper" in French?] (pimiento, poivre*, pepe, pfeffer) | 4.0 F-11
+[How do you say "salt" in French?] (sal, sel*, sale, salz) | 4.0 F-12
+[What's the word for "sugar" in French?] (azucar, sucre*, zucchero, zucker) | 4.0 F-13
+[How do you say "spice" in French?] (especia, epice*, spezia, gewurz) | 4.0 F-14
+[What's the word for "soup" in French?] (sopa, soupe*, zuppa, suppe) | 4.0 F-15
+[How do you say "salad" in French?] (ensalada, salade*, insalata, salat) | 4.0 F-16
+[What's the word for "pizza" in French?] (pizza*, pizza, pizza, pizza) | 4.0 F-17
+[How do you say "pasta" in French?] (pasta*, pasta, pasta, pasta) | 4.0 F-18
+[What's the word for "rice" in French?] (arroz, riz*, riso, reis) | 4.0 F-19
+[How do you say "egg" in French?] (huevo, oeuf*, uovo, ei) | 4.0 F-1A
+[What's the word for "meat" in French?] (carne, viande*, carne, fleisch) | 4.0 F-1B
+[How do you say "fish" in French?] (pescado, poisson*, pesce, fisch) | 4.0 F-1C
+[What's the word for "chicken" in French?] (pollo, poulet*, pollo, huhn) | 4.0 F-1D
+[How do you say "beef" in French?] (carne de res, boeuf*, carne di manzo, rindfleisch) | 4.0 F-1E
+[What's the word for "pork" in French?] (cerdo, porc*, maiale, schweinefleisch) | 4.0 F-1F
+[How do you say "lamb" in French?] (cordero, agneau*, agnello, lamm) | 4.0 F-20
+[What's the word for "duck" in French?] (pato, canard*, anatra, ente) | 4.0 F-21
+[How do you say "turkey" in French?] (pavo, dinde*, tacchino, truthahn) | 4.0 F-22
