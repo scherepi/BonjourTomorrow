@@ -127,6 +127,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAfterview.resx">
+      <DependentUpon>frmAfterview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmArts.resx">
       <DependentUpon>frmArts.cs</DependentUpon>
     </EmbeddedResource>

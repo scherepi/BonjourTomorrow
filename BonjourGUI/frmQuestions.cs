@@ -79,7 +79,12 @@ namespace BonjourGUI
         {
             SessionHandler.exitSession();
             this.Close();
-            // TODO: implement report screen
+            Thread t = new Thread(new ThreadStart(openResults));
+            t.Start();
+        }
+        private void openResults()
+        {
+            Application.Run(new frmAfterview(this.ph, this.dh, SessionHandler.getDigest()));
         }
         // Answer button functionality:
         private void btnOptionOne_Click(object sender, EventArgs e)

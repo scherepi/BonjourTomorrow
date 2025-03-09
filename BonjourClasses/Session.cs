@@ -48,6 +48,9 @@ namespace BonjourClasses
         {
             return this.currentQuestion + "/" + this.totalQuestions;
         }
+        public string getDigest()
+        {
+            return this.getProgress() + 
+        }
     }
-    
 }

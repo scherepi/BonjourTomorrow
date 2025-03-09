@@ -14,6 +14,7 @@ namespace BonjourClasses
         public static Session currentSession = null;    // The current session to be handled.
         public static DataHandler dh = null;            // The program's DataHandler.
         public static ProgressHandler ph = null;        // The program's ProgressHandler.
+        public static String lastSessionResults = "";   // The results of the last session.
         public static void startSession()
         {
             // Starts a new session with no arguments, using the DataHandler's getQuickQuestions method.
@@ -45,6 +46,7 @@ namespace BonjourClasses
             // Exits the current session.
             // TODO: Save functionality?
             Console.WriteLine("Exiting session.");
+            lastSessionResults = currentSession.getProgress();
             currentSession = null;
         }
         public static void reportCorrect(Question q)
