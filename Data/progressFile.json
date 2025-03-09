@@ -21,5 +21,6 @@
 		"Louvre": false,
 		"Bakery": true,
 		"Eraser": false
-	}
+	},
+	"completed": ["B-00", "G-00"]
 }

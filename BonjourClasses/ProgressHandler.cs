@@ -12,6 +12,7 @@ namespace BonjourClasses
         public DataHandler parent;                              // The DataHandler that created this ProgressHandler.
         public Dictionary<String, (int, int)> topicProgress;    // A dictionary of topics and their progress.
         public Dictionary<String, bool> unlocks;                // A dictionary of unlocks and their status.
+        public List<String> completed;                           // A list of answered questions.
 
         public ProgressHandler(DataHandler parent, String progressFile)
         {
@@ -31,6 +32,11 @@ namespace BonjourClasses
             foreach(JsonProperty unlock in jsonProgress.RootElement.GetProperty("unlocks").EnumerateObject())
             {
                 unlocks.Add(unlock.Name, unlock.Value.GetBoolean());
+            }
+            completed = new List<String>(); 
+            foreach(JsonProperty id in jsonProgress.RootElement.GetProperty("completed").EnumerateObject())
+            {
+                completed.Add(id.Value.GetString());
             }
             // And we're done! Everything should be loaded.
         }
@@ -121,8 +127,15 @@ namespace BonjourClasses
                 Console.WriteLine(u + " is " + unlocks[u]);
                 finalData += "\t\t\"" + u + "\": " + unlocks[u].ToString().ToLower() + ",\n";
             }
-            finalData = finalData.Substring(0, finalData.Length - 2) + "\n\t}\n";
-            finalData += "}";
+            // Populate completed object
+            finalData = finalData.Substring(0, finalData.Length - 2) + "\n\t},\n";
+            finalData += "\t\"completed\": [";
+            foreach (String id in completed)
+            {
+                finalData += "\"" + id + "\", ";
+            }
+            // Remove the last comma and space, finish the write
+            finalData = finalData.Substring(0, finalData.Length - 2) + "]\n}";
             return finalData;
         }
         public void printDebug()
