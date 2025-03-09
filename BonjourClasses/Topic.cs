@@ -40,6 +40,7 @@ namespace BonjourClasses
             // For every line (question) in our provided data string:
             while ((nextLine = sr.ReadLine()) != null)
             {
+                Console.WriteLine(nextLine);
                 String questionText = nextLine.Split(']')[0].Substring(1); // First, the actual question text is what's in the square brackets.
                 String[] answers = nextLine.Split(']')[1].Split(')')[0].Substring(2).Split(','); // The string with all the answers is gonna be within the parentheses, we can break it up into each one.
                 LinkedList<Answer> answerList = new LinkedList<Answer>(); // Init our answer list
@@ -56,8 +57,11 @@ namespace BonjourClasses
                         answerList.AddLast(new Answer(a.Trim(), false));
                     }
                 }
-                double difficulty = double.Parse(nextLine.Split('|')[1].Trim());
-                this.Questions.Add(new Question(questionText, difficulty, answerList, correct), difficulty);
+                double difficulty = double.Parse(nextLine.Split('|')[1].Trim().Split(' ')[0].Trim());
+                // Debug...
+                //Console.WriteLine(nextLine.Split('|')[1].Trim());
+                String questionID = nextLine.Split('|')[1].Trim().Split(' ')[1].Trim();
+                this.Questions.Add(new Question(questionText, difficulty, questionID, answerList, correct), difficulty);
             }
             Console.WriteLine("Initialized topic " + this.name + " with " + this.Questions.Count + " questions.");
             

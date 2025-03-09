@@ -1,10 +1,10 @@
-[How do you say the number "one" in French?] (un*, une, uno, eins) | 4.0
-[What's the word for the number "two" in French?] (deux*, dos, due, zwei) | 4.0
-[How do you say the number "three" in French?] (trois*, tres, tre, drei) | 4.0
-[What's the word for the number "four" in French?] (quatre*, cuatro, quattro, vier) | 4.0
-[How do you say the number "five" in French?] (cinq*, cinco, cinque, funf) | 4.0
-[What's the word for the number "six" in French?] (six*, seis, sei, sechs) | 4.0
-[How do you say the number "seven" in French?] (sept*, siete, sette, sieben) | 4.0
-[What's the word for the number "eight" in French?] (huit*, ocho, otto, acht) | 4.0
-[How do you say the number "nine" in French?] (neuf*, nueve, nove, neun) | 4.0
-[What's the word for the number "ten" in French?] (dix*, diez, dieci, zehn) | 4.0
+[How do you say the number "one" in French?] (un*, une, uno, eins) | 4.0 N-00
+[What's the word for the number "two" in French?] (deux*, dos, due, zwei) | 4.0 N-01
+[How do you say the number "three" in French?] (trois*, tres, tre, drei) | 4.0 N-02
+[What's the word for the number "four" in French?] (quatre*, cuatro, quattro, vier) | 4.0 N-03
+[How do you say the number "five" in French?] (cinq*, cinco, cinque, funf) | 4.0 N-04
+[What's the word for the number "six" in French?] (six*, seis, sei, sechs) | 4.0 N-05
+[How do you say the number "seven" in French?] (sept*, siete, sette, sieben) | 4.0 N-06
+[What's the word for the number "eight" in French?] (huit*, ocho, otto, acht) | 4.0 N-07
+[How do you say the number "nine" in French?] (neuf*, nueve, nove, neun) | 4.0 N-08
+[What's the word for the number "ten" in French?] (dix*, diez, dieci, zehn) | 4.0 N-09

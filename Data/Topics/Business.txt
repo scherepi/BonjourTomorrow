@@ -1,1 +1,29 @@
-[How do you say "tie" in French?] (cravate*, corbata, corbat, binden) | 4.3
+[How do you say "tie" in French?] (cravate*, corbata, corbat, binden) | 4.3 B-00
+[How do you say "shirt" in French?] (chemise*, camisa, skjorte, hemd) | 4.3 B-01
+[How do you say "pants" in French?] (pantalon*, pantalon, bukser, hose) | 4.3 B-02
+[How do you say "dress" in French?] (robe*, vestido, kjole, kleid) | 4.3 B-03
+[How do you say "skirt" in French?] (jupe*, falda, nederdel, rock) | 4.3 B-04
+[How do you say "shoes" in French?] (chaussures*, zapatos, sko, schuhe) | 4.3 B-05
+[How do you say "socks" in French?] (chaussettes*, calcetines, sokker, socken) | 4.3 B-06
+[How do you say "hat" in French?] (chapeau*, sombrero, hat, hut) | 4.3 B-07
+[How do you say "coat" in French?] (manteau*, abrigo, frakke, mantel) | 4.3 B-08
+[How do you say "jacket" in French?] (veste*, chaqueta, jakke, jacke) | 4.3 B-09
+[How do you say "scarf" in French?] (écharpe*, bufanda, tørklæde, schal) | 4.3 B-0A
+[How do you say "agreement" in French?] (accord*, acuerdo, aftale, vereinbarung) | 4.3 B-0B
+[How do you say "contract" in French?] (contrat*, contrato, kontrakt, vertrag) | 4.3 B-0C
+[How do you say "invoice" in French?] (facture*, factura, faktura, rechnung) | 4.3 B-0D
+[How do you say "receipt" in French?] (reçu*, recibo, kvittering, quittung) | 4.3 B-0E
+[How do you say "bill" in French?] (facture*, cuenta, regning, rechnung) | 4.3 B-0F
+[How do you say "payment" in French?] (paiement*, pago, betaling, zahlung) | 4.3 B-10
+[How do you say "salary" in French?] (salaire*, salario, løn, gehalt) | 4.3 B-11
+[How do you say "wage" in French?] (salaire*, salario, løn, lohn) | 4.3 B-12
+[How do you say "bonus" in French?] (prime*, bonificación, bonus, bonus) | 4.3 B-13
+[How do you say "commission" in French?] (commission*, comisión, kommission, provision) | 4.3 B-14
+[How do you say "overtime" in French?] (heures supplémentaires*, horas extras, overtid, überstunden) | 4.3 B-15
+[How do you say "promotion" in French?] (promotion*, promoción, forfremmelse, beförderung) | 4.3 B-16
+[How do you say "demotion" in French?] (rétrogradation*, degradación, degradering, deklassierung) | 4.3 B-17
+[How do you say "resignation" in French?] (démission*, renuncia, fratræden, kündigung) | 4.3 B-18
+[How do you say "retirement" in French?] (retraite*, jubilación, pensionering, rente) | 4.3 B-19
+[How do you say "layoff" in French?] (licenciement*, despido, afskedigelse, entlassung) | 4.3 B-1A
+[How do you say "termination" in French?] (résiliation*, terminación, opsigelse, kündigung) | 4.3 B-1B
+[How do you say "interview" in French?] (entretien*, entrevista, interview, vorstellungsgespräch) | 4.3 B-1C

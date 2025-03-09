@@ -6,6 +6,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.IO;
 using System.CodeDom;
+using System.Collections;
 
 // TODOs:
 // - Code cleanup, remove unnecessary checks (we have error handling for a reason)
@@ -19,11 +20,13 @@ namespace BonjourClasses
     {
         public String dataPath; // The path to the data folder
         public LinkedList<Topic> topicList; // The list of Topic objects and the questions they contain.
+        public List<Question> questionList; // The list of all questions, for quick access.
         public ProgressHandler progressHandler;
         public DataHandler(String dataPath)
         {
             this.dataPath = dataPath;
             this.topicList = new LinkedList<Topic>();
+            this.questionList = new List<Question>();
             try { this.initalizeData(); } catch (FileNotFoundException) { System.Console.WriteLine("Unable to initalize data!"); }
         }
         public void printDebug()
@@ -37,6 +40,7 @@ namespace BonjourClasses
             int sum = 0;
             foreach (Topic t in this.topicList) { sum += t.getQuestions().Count; }
             Console.WriteLine(sum);
+            Console.WriteLine("First question's id: " + this.questionList[0].getID());
         }
         public void initalizeData() {
             // if the data folder exists, then we wanna go through each topic file and pass it to the constructor!
@@ -50,7 +54,9 @@ namespace BonjourClasses
                         Console.WriteLine("Found topic file: " + file);
                         String topicName = file.Substring(file.LastIndexOf("\\") + 1);
                         topicName = topicName.Substring(0, topicName.Length - 4);
-                        this.topicList.AddLast(new Topic(topicName, File.ReadAllText(file)));
+                        Topic toBeAdded = new Topic(topicName, File.ReadAllText(file));
+                        this.topicList.AddLast(toBeAdded);
+                        this.questionList.AddRange(toBeAdded.getQuestions());
                     }
                 }
                 else {

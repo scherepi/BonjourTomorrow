@@ -17,11 +17,11 @@ namespace BonjourClasses
         public double difficulty;           // A double representing the difficulty of the question.
         public (int, int) prevAttempts;     // Holds the previous attempts for the question.
 
-        public Question(String text, double difficulty, LinkedList<Answer> answers, Answer correctAnswer)
+        public Question(String text, double difficulty, String questionID, LinkedList<Answer> answers, Answer correctAnswer)
         {
             this.text = text;
-            this.questionID = ; // Grab the next available unique id from our static SessionHandler.
             this.difficulty = difficulty;
+            this.questionID = questionID;
             this.answers = answers;
             this.correctAnswer = correctAnswer;
             this.prevAttempts = (0, 0);
@@ -37,7 +37,7 @@ namespace BonjourClasses
         {
             return this.text;
         }
-        public uint getID()
+        public String getID()
         {
             return this.questionID;
         }   
