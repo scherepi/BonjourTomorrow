@@ -10,6 +10,7 @@ namespace BonjourClasses
 {
     public class Question
     {
+        // 
         public LinkedList<Answer> answers;
         public Answer correctAnswer;
         public String text;

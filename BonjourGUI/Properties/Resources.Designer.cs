@@ -93,6 +93,16 @@ namespace BonjourGUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bakery {
+            get {
+                object obj = ResourceManager.GetObject("bakery", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ellipse_1__1_ {
             get {
                 object obj = ResourceManager.GetObject("Ellipse 1 (1)", resourceCulture);
@@ -126,6 +136,16 @@ namespace BonjourGUI.Properties {
         internal static System.Drawing.Bitmap istockphoto_900591912_612x612 {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-900591912-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap louvre_cropped {
+            get {
+                object obj = ResourceManager.GetObject("louvre_cropped", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
