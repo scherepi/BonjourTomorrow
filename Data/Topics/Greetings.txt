@@ -1,0 +1,11 @@
+[How do you say "hello" in French?] (bonjour*, hola, elo, holis) | 1.3
+[How do you say "hi" in French?] (salut*, hola, elo, holis) | 1.5
+[How do you say "good morning" in French?] (bonjour*, buenos dias, bom dia, boa tarde) | 2.3
+[How do you say "good afternoon" in French?] (bon après-midi*, buenas tardes, boa tarde, boa noite) | 2.3
+[How do you say "good evening" in French?] (bonsoir*, buenas noches, boa noite, boa tarde) | 2.3
+[How do you say "good night" in French?] (bonne nuit*, buenas noches, boa noite, boa tarde) | 2.3
+[How do you say "goodbye" in French?] (au revoir*, adios, adeus, tchau) | 2.3
+[How do you say "see you later" in French?] (à plus tard*, hasta luego, até logo, até mais) | 2.3
+[How do you say "see you tomorrow" in French?] (à demain*, hasta mañana, até amanhã, até logo) | 2.3
+[How do you say "see you soon" in French?] (à bientôt*, hasta pronto, até logo, até breve) | 2.3
+[How do you say "how are you?" in French?] (comment ça va?, como estas?, como estas?, como vai?) | 2.3

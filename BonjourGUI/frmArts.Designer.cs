@@ -28,20 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_Welcome = new System.Windows.Forms.Label();
+            this.btn_LouvreLock = new System.Windows.Forms.Button();
+            this.btn_BakeryLock = new System.Windows.Forms.Button();
+            this.lbl_Louvre = new System.Windows.Forms.Label();
             this.lbl_Bakery = new System.Windows.Forms.Label();
             this.btn_Return = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lbl_Welcome
             // 
-            this.label1.AutoSize = true;
-            this.label1.Image = global::BonjourGUI.Properties.Resources.louvre_cropped;
-            this.label1.Location = new System.Drawing.Point(531, 182);
-            this.label1.MinimumSize = new System.Drawing.Size(450, 381);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(450, 381);
-            this.label1.TabIndex = 3;
+            this.lbl_Welcome.AutoSize = true;
+            this.lbl_Welcome.Font = new System.Drawing.Font("Ingrid Darling", 70F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Welcome.Location = new System.Drawing.Point(248, 36);
+            this.lbl_Welcome.Name = "lbl_Welcome";
+            this.lbl_Welcome.Size = new System.Drawing.Size(512, 146);
+            this.lbl_Welcome.TabIndex = 4;
+            this.lbl_Welcome.Text = "Welcome to Paris!";
+            // 
+            // btn_LouvreLock
+            // 
+            this.btn_LouvreLock.Image = global::BonjourGUI.Properties.Resources._lock;
+            this.btn_LouvreLock.Location = new System.Drawing.Point(716, 333);
+            this.btn_LouvreLock.Name = "btn_LouvreLock";
+            this.btn_LouvreLock.Size = new System.Drawing.Size(102, 117);
+            this.btn_LouvreLock.TabIndex = 6;
+            this.btn_LouvreLock.UseVisualStyleBackColor = true;
+            // 
+            // btn_BakeryLock
+            // 
+            this.btn_BakeryLock.Image = global::BonjourGUI.Properties.Resources.small_lock;
+            this.btn_BakeryLock.Location = new System.Drawing.Point(273, 463);
+            this.btn_BakeryLock.Name = "btn_BakeryLock";
+            this.btn_BakeryLock.Size = new System.Drawing.Size(44, 59);
+            this.btn_BakeryLock.TabIndex = 5;
+            this.btn_BakeryLock.UseVisualStyleBackColor = true;
+            // 
+            // lbl_Louvre
+            // 
+            this.lbl_Louvre.AutoSize = true;
+            this.lbl_Louvre.Image = global::BonjourGUI.Properties.Resources.louvre_cropped;
+            this.lbl_Louvre.Location = new System.Drawing.Point(531, 182);
+            this.lbl_Louvre.MinimumSize = new System.Drawing.Size(450, 381);
+            this.lbl_Louvre.Name = "lbl_Louvre";
+            this.lbl_Louvre.Size = new System.Drawing.Size(450, 381);
+            this.lbl_Louvre.TabIndex = 3;
             // 
             // lbl_Bakery
             // 
@@ -67,7 +98,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btn_LouvreLock);
+            this.Controls.Add(this.btn_BakeryLock);
+            this.Controls.Add(this.lbl_Welcome);
+            this.Controls.Add(this.lbl_Louvre);
             this.Controls.Add(this.lbl_Bakery);
             this.Controls.Add(this.btn_Return);
             this.Name = "frmArts";
@@ -81,6 +115,9 @@
 
         private System.Windows.Forms.Button btn_Return;
         private System.Windows.Forms.Label lbl_Bakery;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_Louvre;
+        private System.Windows.Forms.Label lbl_Welcome;
+        private System.Windows.Forms.Button btn_BakeryLock;
+        private System.Windows.Forms.Button btn_LouvreLock;
     }
 }

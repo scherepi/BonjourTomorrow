@@ -59,6 +59,12 @@
     <Compile Include="frmArts.Designer.cs">
       <DependentUpon>frmArts.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBakery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBakery.Designer.cs">
+      <DependentUpon>frmBakery.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,12 @@
     </Compile>
     <Compile Include="frmLearn.Designer.cs">
       <DependentUpon>frmLearn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLouvre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLouvre.Designer.cs">
+      <DependentUpon>frmLouvre.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMissed.cs">
       <SubType>Form</SubType>
@@ -118,11 +130,17 @@
     <EmbeddedResource Include="frmArts.resx">
       <DependentUpon>frmArts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBakery.resx">
+      <DependentUpon>frmBakery.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLearn.resx">
       <DependentUpon>frmLearn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLouvre.resx">
+      <DependentUpon>frmLouvre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMissed.resx">
       <DependentUpon>frmMissed.cs</DependentUpon>
@@ -202,6 +220,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\louvre_cropped.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small_lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fork.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nums.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

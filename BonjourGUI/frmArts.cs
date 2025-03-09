@@ -30,8 +30,41 @@ namespace BonjourGUI
             (bool, bool) data = this.ph.getACUnlocks();
             this.bakery = data.Item1;
             this.louvre = data.Item2;
+            if (this.bakery)
+            {
+                this.btn_BakeryLock.Enabled = false;
+                this.btn_BakeryLock.Visible = false;
+                this.btn_BakeryLock.Dispose();
+                this.lbl_Bakery.BringToFront();
+                this.lbl_Bakery.Click += new EventHandler(this.openBakery);
+            }
+            if (this.louvre)
+            {
+                this.btn_LouvreLock.Enabled = false;
+                this.btn_LouvreLock.Visible = false;
+                this.btn_LouvreLock.Dispose();
+                this.lbl_Louvre.BringToFront();
+                this.lbl_Louvre.Click += new EventHandler(this.openLouvre);
+            }
         }
-
+        public void openLouvre(object sender, EventArgs e)
+        {
+            Thread t = new Thread(new ThreadStart(ThreadLouvre));
+            t.Start();
+        }
+        public void openBakery(object sender, EventArgs e)
+        {
+            Thread t = new Thread(new ThreadStart(ThreadBakery));
+            t.Start();
+        }
+        public void ThreadLouvre()
+        {
+            Application.Run(new frmLouvre());
+        }
+        public void ThreadBakery()
+        {
+            Application.Run(new frmBakery());
+        }
 
         private void btn_Return_Click(object sender, EventArgs e)
         {

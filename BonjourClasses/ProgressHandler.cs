@@ -61,6 +61,13 @@ namespace BonjourClasses
             (int, int) progress = topicProgress[topic];
             topicProgress[topic] = (progress.Item1 + 1, progress.Item2);
         }
+
+        public int getTopicProgress(String topic)
+        {
+            // Just return the current progress.
+            return topicProgress[topic].Item1;
+        }   
+
         public void resetProgress()
         {
             // For testing purposes mostly, this'll wipe all progress.
