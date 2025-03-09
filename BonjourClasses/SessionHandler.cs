@@ -13,7 +13,6 @@ namespace BonjourClasses
     {
         public static Session currentSession = null;    // The current session to be handled.
         public static DataHandler dh = null;            // The program's DataHandler.
-        private static uint nextID = 0;                 // Counter for unique question IDs.
         public static void startSession()
         {
             // Starts a new session with no arguments, using the DataHandler's getQuickQuestions method.
@@ -74,13 +73,6 @@ namespace BonjourClasses
             // This is how we get access to the DataHandler, since we're a static class without constructors.
             Console.WriteLine("SessionHandler receiving DataHandler.");
             SessionHandler.dh = dh;
-        }
-        public static uint getNextID()
-        {
-            // Returns the next unique question ID.
-            uint current = nextID;
-            nextID++;
-            return current;
         }
 
     }
