@@ -48,7 +48,9 @@ namespace BonjourClasses
                     {
                         // add to our master topic list the created Topic object, passing the file's name and its contents
                         Console.WriteLine("Found topic file: " + file);
-                        this.topicList.AddLast(new Topic(file, File.ReadAllText(file)));
+                        String topicName = file.Substring(file.LastIndexOf("\\") + 1);
+                        topicName = topicName.Substring(0, topicName.Length - 4);
+                        this.topicList.AddLast(new Topic(topicName, File.ReadAllText(file)));
                     }
                 }
                 else {
@@ -75,6 +77,7 @@ namespace BonjourClasses
         }
         public ProgressHandler loadProgress()
         {
+            // Returns a ProgressHandler object with the data loaded from the progress file.
             String progressFile = this.dataPath + "\\progressFile.json";
             Console.WriteLine("Trying to read from " + progressFile);
             if (File.Exists(progressFile)) {
@@ -113,6 +116,7 @@ namespace BonjourClasses
 
         public void saveProgress(ProgressHandler ph)
         {
+            // Write the progress handler's data to the progress file.
             String jsonData = ph.serializeData();
             Console.WriteLine("Writing to file...");
             File.WriteAllText(this.dataPath + "\\progressFile.json", jsonData);

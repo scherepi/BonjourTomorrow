@@ -9,9 +9,9 @@ namespace BonjourClasses
 {
     public class Topic
     {
-        public String name;
-        public Dictionary<Question, double> Questions;
-        public int QuestionCount;
+        public String name;                             // The name for this topic.
+        public Dictionary<Question, double> Questions;  // The questions for this topic, with their respective difficulties.
+        public int QuestionCount;                       // The number of questions available in this topic.
 
         public String getName()
         {

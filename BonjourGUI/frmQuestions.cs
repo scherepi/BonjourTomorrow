@@ -27,6 +27,7 @@ namespace BonjourGUI
             this.question = question;
             lblQuestionText.Text = question.getText();
             lblFeedback.Text = "";
+            lblProgress.Text = SessionHandler.getSessionProgress();
             btnNext.Visible = false;
             btnNext.Enabled = false;
             answers = question.getAnswers().ToArray();
@@ -80,7 +81,7 @@ namespace BonjourGUI
             this.Close();
             // TODO: implement report screen
         }
-
+        // Answer button functionality:
         private void btnOptionOne_Click(object sender, EventArgs e)
         {
             reactToInput(answers[0].isCorrect());
@@ -112,10 +113,12 @@ namespace BonjourGUI
                 lblFeedback.Text = "Incorrect!";
                 lblFeedback.ForeColor = Color.FromName("Red");
             }
+            // Turn off all the answer buttons:
             btnOptionOne.Enabled = false;
             btnOptionTwo.Enabled = false;
             btnOptionThree.Enabled = false;
             btnOptionFour.Enabled = false;
+            // Make the "next question" button visible and clickable:
             btnNext.Visible = true;
             btnNext.Enabled = true;
         }
