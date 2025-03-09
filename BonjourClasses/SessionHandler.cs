@@ -13,6 +13,7 @@ namespace BonjourClasses
     {
         public static Session currentSession = null;    // The current session to be handled.
         public static DataHandler dh = null;            // The program's DataHandler.
+        public static ProgressHandler ph = null;        // The program's ProgressHandler.
         public static void startSession()
         {
             // Starts a new session with no arguments, using the DataHandler's getQuickQuestions method.
@@ -46,8 +47,10 @@ namespace BonjourClasses
             Console.WriteLine("Exiting session.");
             currentSession = null;
         }
-        public static void reportCorrect()
+        public static void reportCorrect(Question q)
         {
+            // Reports a question as answered correctly.
+            ph.reportCorrect(q);
             Console.WriteLine("Question answered correctly.");
             currentSession.incrementCorrect();
         }
@@ -68,11 +71,12 @@ namespace BonjourClasses
             Console.WriteLine("Returning session progress " + currentSession.getProgress());
             return currentSession.getProgress();
         }
-        public static void passHandler(DataHandler dh)
+        public static void passHandlers(DataHandler dh, ProgressHandler ph)
         {
             // This is how we get access to the DataHandler, since we're a static class without constructors.
-            Console.WriteLine("SessionHandler receiving DataHandler.");
+            Console.WriteLine("SessionHandler receiving DataHandler and ProgressHandler.");
             SessionHandler.dh = dh;
+            SessionHandler.ph = ph;
         }
 
     }

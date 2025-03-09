@@ -34,9 +34,9 @@ namespace BonjourClasses
                 unlocks.Add(unlock.Name, unlock.Value.GetBoolean());
             }
             completed = new List<String>(); 
-            foreach(JsonProperty id in jsonProgress.RootElement.GetProperty("completed").EnumerateObject())
+            foreach(JsonElement id in jsonProgress.RootElement.GetProperty("completed").EnumerateArray())
             {
-                completed.Add(id.Value.GetString());
+                completed.Add(id.GetString());
             }
             // And we're done! Everything should be loaded.
         }
@@ -54,6 +54,36 @@ namespace BonjourClasses
             // Just gotta set the value!
             unlocks[unlock] = true;
         }
+
+        public void reportCorrect(Question q)
+        {
+            // Called by SessionHandler when a question is answered correctly.
+            // First, check if the question is already completed.
+            if (completed.Contains(q.getID()))
+            {
+                System.Console.WriteLine("Question already completed.");
+                return;
+            } else
+            {
+                completed.Add(q.getID()); // Otherwise, add it to the completed list.
+                switch (q.getID()[0]) // Here's the clever part: we use the first character of the ID to figure out what topic it belongs to, and call progressTopic() accordingly.
+                {
+                    case 'G':
+                        this.progressTopic("Greetings");
+                        break;
+                    case 'B':
+                        this.progressTopic("Business");
+                        break;
+                    case 'F':
+                        this.progressTopic("Food");
+                        break;
+                    case 'N':
+                        this.progressTopic("Numbers");
+                        break;
+                }
+            }
+        }
+
         public void progressTopic(String topic)
         {
             // First, check if the topic is already completed
@@ -86,6 +116,7 @@ namespace BonjourClasses
             {
                 unlocks[unlock] = false; // Then, set all our unlocks back to false.
             }
+            completed.Clear();
         }
         public void maxOut()
         {
@@ -135,7 +166,8 @@ namespace BonjourClasses
                 finalData += "\"" + id + "\", ";
             }
             // Remove the last comma and space, finish the write
-            finalData = finalData.Substring(0, finalData.Length - 2) + "]\n}";
+            if (completed.Count > 0) { finalData = finalData.Substring(0, finalData.Length - 2); }
+            finalData += "]\n}";
             return finalData;
         }
         public void printDebug()

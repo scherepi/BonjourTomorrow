@@ -30,7 +30,7 @@ namespace BonjourGUI
             // Initialize our ProgressHandler from the DataHandler
             this.progressHandler = dataHandler.loadProgress(); 
             // Pass the data handler to the session handler. (It kinda needs to access data.)
-            SessionHandler.passHandler(dataHandler);
+            SessionHandler.passHandlers(dataHandler, progressHandler);
             // Very important!! This adds auto-save on exit.
             AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
         }

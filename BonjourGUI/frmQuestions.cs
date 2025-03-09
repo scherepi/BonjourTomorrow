@@ -106,7 +106,7 @@ namespace BonjourGUI
             {
                 lblFeedback.Text = "Correct!";
                 lblFeedback.ForeColor = Color.FromName("Green");
-                SessionHandler.reportCorrect();
+                SessionHandler.reportCorrect(question);
             }
             else
             {
