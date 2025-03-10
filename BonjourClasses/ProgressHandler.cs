@@ -136,10 +136,6 @@ namespace BonjourClasses
         {
             // This is the big thing, once we've finished up we need to be able to pass valid JSON back to the DataHandler to save to the progressFile.
             String finalData = "";
-            JsonSerializerOptions jsonSerializerOptions = new JsonSerializerOptions
-            {
-                WriteIndented = true
-            };
             finalData += "{\n\t";
             finalData += "\"topicProgress\": {\n";
             // Populate topicProgress object
