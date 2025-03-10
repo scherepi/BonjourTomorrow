@@ -33,7 +33,7 @@ namespace BonjourClasses
         {
             Console.WriteLine("Data Path: " + this.dataPath);
             Console.WriteLine("Topic Count: " + this.topicList.Count);
-            Console.WriteLine("Progress Handler: " + (this.progressHandler != null ? "Initialized" : "Uninitialized") );
+            Console.WriteLine("Progress Handler: " + (this.progressHandler != null ? "Initialized" : "Uninitialized"));
             Console.WriteLine("Topics Loaded: ");
             foreach (Topic t in this.topicList) { Console.WriteLine(t.getName()); }
             Console.WriteLine("Questions Loaded: ");
@@ -105,17 +105,11 @@ namespace BonjourClasses
             return null;
         }
         public List<Question> getQuickQuestions() { 
-            int numFromEach = (int)Math.Round((20.0 / this.topicList.Count));
             List<Question> list = new List<Question>();
             Random rnd = new Random();
-            foreach (Topic t in this.topicList)
+            for (int i = 0; i < 20; i++)
             {
-                for (int i = 0; i < numFromEach; i++)
-                {
-                    Question[] tArray = t.getQuestions().ToArray();
-                    list.Add(tArray[rnd.Next(0, t.getQuestions().Count)]);
-                }
-
+                list.Add(this.questionList[rnd.Next(0, this.questionList.Count)]);
             }
             return list;
         }

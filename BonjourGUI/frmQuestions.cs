@@ -136,7 +136,16 @@ namespace BonjourGUI
         }
         private void ThreadNextQuestion()
         {
-            Application.Run(new frmQuestions(this.ph, this.dh, SessionHandler.getNextQuestion()));
+            Question q = SessionHandler.getNextQuestion();
+            if (q == null)
+            {
+                // If there are no more questions, we should close the session and open the results.
+                this.Close();
+                Thread t = new Thread(new ThreadStart(openResults));
+                t.Start();
+                return;
+            }
+            Application.Run(new frmQuestions(this.ph, this.dh, q));
         }
     }
 }

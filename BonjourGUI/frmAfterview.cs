@@ -41,7 +41,9 @@ namespace BonjourGUI
 
         private void btn_Return_Click(object sender, EventArgs e)
         {
+            this.Close();
             Thread t = new Thread(new ThreadStart(returnHomeThread));
+            t.Start();
         }
         
         private void returnHomeThread()
