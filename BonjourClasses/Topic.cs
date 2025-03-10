@@ -58,8 +58,6 @@ namespace BonjourClasses
                     }
                 }
                 double difficulty = double.Parse(nextLine.Split('|')[1].Trim().Split(' ')[0].Trim());
-                // Debug...
-                //Console.WriteLine(nextLine.Split('|')[1].Trim());
                 String questionID = nextLine.Split('|')[1].Trim().Split(' ')[1].Trim();
                 this.Questions.Add(new Question(questionText, difficulty, questionID, answerList, correct), difficulty);
             }

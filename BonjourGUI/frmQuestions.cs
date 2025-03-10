@@ -84,7 +84,7 @@ namespace BonjourGUI
         }
         private void openResults()
         {
-            Application.Run(new frmAfterview(this.ph, this.dh, SessionHandler.getDigest()));
+            Application.Run(new frmAfterview(this.ph, this.dh));
         }
         // Answer button functionality:
         private void btnOptionOne_Click(object sender, EventArgs e)

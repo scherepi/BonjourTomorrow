@@ -50,7 +50,7 @@ namespace BonjourClasses
         }
         public string getDigest()
         {
-            return this.getProgress() + 
+            return this.currentCorrect + "/" + this.getProgress();
         }
     }
 }

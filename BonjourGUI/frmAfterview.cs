@@ -35,7 +35,18 @@ namespace BonjourGUI
             };
             int randomNumber = rnd.Next(0, encouragements.Length);
             lbl_Encouragement.Text = encouragements[randomNumber];
-            lbl_Results.Text = "You got " + 
+            String[] results = SessionHandler.getLastSessionResults().Split('/');
+            lbl_Results.Text = "You got " + results[0] + " questions correct out of "  + results[1] + " questions answered!";
+        }
+
+        private void btn_Return_Click(object sender, EventArgs e)
+        {
+            Thread t = new Thread(new ThreadStart(returnHomeThread));
+        }
+        
+        private void returnHomeThread()
+        {
+            Application.Run(new BonjourTomorrow(this.dh, this.ph));
         }
     }
 }

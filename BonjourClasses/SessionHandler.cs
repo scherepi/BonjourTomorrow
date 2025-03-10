@@ -46,7 +46,7 @@ namespace BonjourClasses
             // Exits the current session.
             // TODO: Save functionality?
             Console.WriteLine("Exiting session.");
-            lastSessionResults = currentSession.getProgress();
+            lastSessionResults = currentSession.getDigest();
             currentSession = null;
         }
         public static void reportCorrect(Question q)
@@ -81,5 +81,11 @@ namespace BonjourClasses
             SessionHandler.ph = ph;
         }
 
+        public static String getLastSessionResults()
+        {
+            // Returns the results of the last session.
+            Console.WriteLine("Returning last session results: " + lastSessionResults);
+            return lastSessionResults;
+        }
     }
 }

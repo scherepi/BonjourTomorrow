@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.lbl_Encouragement = new System.Windows.Forms.Label();
+            this.lbl_Results = new System.Windows.Forms.Label();
+            this.btn_Return = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_Encouragement
@@ -43,11 +45,32 @@
             this.lbl_Encouragement.Text = "lbl_Encouragement";
             this.lbl_Encouragement.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lbl_Results
+            // 
+            this.lbl_Results.AutoSize = true;
+            this.lbl_Results.Location = new System.Drawing.Point(123, 187);
+            this.lbl_Results.Name = "lbl_Results";
+            this.lbl_Results.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Results.TabIndex = 1;
+            this.lbl_Results.Text = "label1";
+            // 
+            // btn_Return
+            // 
+            this.btn_Return.Location = new System.Drawing.Point(220, 340);
+            this.btn_Return.Name = "btn_Return";
+            this.btn_Return.Size = new System.Drawing.Size(75, 23);
+            this.btn_Return.TabIndex = 2;
+            this.btn_Return.Text = "Go Home!";
+            this.btn_Return.UseVisualStyleBackColor = true;
+            this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
+            // 
             // frmAfterview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(526, 450);
+            this.Controls.Add(this.btn_Return);
+            this.Controls.Add(this.lbl_Results);
             this.Controls.Add(this.lbl_Encouragement);
             this.Name = "frmAfterview";
             this.Text = "Nice job!";
@@ -59,5 +82,7 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_Encouragement;
+        private System.Windows.Forms.Label lbl_Results;
+        private System.Windows.Forms.Button btn_Return;
     }
 }
