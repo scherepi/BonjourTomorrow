@@ -127,6 +127,17 @@ namespace BonjourClasses
             return topicProgress[topic].Item1;
         }   
 
+        public Dictionary<Question, uint> getMissed()
+        {
+            // Return the missed questions.
+            Dictionary<Question, uint> missedQuestions = new Dictionary<Question, uint>();
+            foreach (String id in missed.Keys)
+            {
+                missedQuestions.Add(parent.getQuestion(id), missed[id]);
+            }
+            return missedQuestions;
+        }
+
         public void resetProgress()
         {
             // For testing purposes mostly, this'll wipe all progress.

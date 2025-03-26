@@ -62,7 +62,7 @@
             this.Controls.Add(this.btn_Return);
             this.Controls.Add(this.lst_questions);
             this.Name = "frmAllQuestions";
-            this.Text = "frmAllQuestions";
+            this.Text = "Everything at your fingertips!";
             this.ResumeLayout(false);
 
         }
