@@ -78,7 +78,7 @@ namespace BonjourGUI
 
         private void ThreadQuestionsForm()
         {
-            Application.Run(new frmAllQuestions());
+            Application.Run(new frmAllQuestions(this.ph, this.dh));
         }
     }
 }

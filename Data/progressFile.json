@@ -1,7 +1,7 @@
 {
 	"topicProgress": {
 		 "Food": {
-			"Completed": 4,
+			"Completed": 7,
 			"Total": 40
 		 },
 		 "Greetings": {
@@ -9,11 +9,11 @@
 			"Total": 40
 		 },
 		 "Numbers": {
-			"Completed": 0,
+			"Completed": 1,
 			"Total": 40
 		 },
 		 "Business": {
-			"Completed": 0,
+			"Completed": 3,
 			"Total": 40
 		 }
 	},
@@ -22,6 +22,6 @@
 		"Bakery": false,
 		"Eraser": false
 	},
-	"completed": ["F-01", "F-02", "F-03", "F-00"],
-	"missed": { "F-00": 0, "F-01": 0 }
+	"completed": ["F-01", "F-02", "F-03", "F-00", "N-09", "F-0F", "F-05", "B-05", "F-1F", "B-0B", "B-00"],
+	"missed": { "F-0E": 1, "B-1A": 1, "B-13": 1 }
 }

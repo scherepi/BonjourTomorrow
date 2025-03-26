@@ -27,6 +27,24 @@ namespace BonjourClasses
             }
             
         }
+
+        public static void startQuestion(String questionID)
+        {
+            // Starts a new session with a given question ID.
+            Console.WriteLine("Asking DataHandler for the question with ID " + questionID);
+            Question q = dh.getQuestion(questionID);
+            Console.WriteLine((q == null) ? "Failed to find question." : "Found question.");
+            currentSession = new Session(q);
+            Console.WriteLine("Session started with question " + questionID);
+        }
+
+        public static void startQuestion(Question q)
+        {
+            // Starts a new session with a given question object.
+            Console.WriteLine("Starting new session with question " + q.getID());
+            currentSession = new Session(q);
+        }
+
         public static void startSession(String topicString)
         {
             // Starts a new session with a given topic name.

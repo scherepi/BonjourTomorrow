@@ -28,6 +28,16 @@ namespace BonjourClasses
             this.totalQuestions = this.sessionQuestions.Count;
             this.currentCorrect = 0;
         }
+
+        public Session(Question q) // This constructor allows you to start a session with a single question.
+        {
+            this.sessionQuestions = new Queue<Question>();
+            this.sessionQuestions.Enqueue(q);
+            this.currentQuestion = 0;
+            this.totalQuestions = 1;
+            this.currentCorrect = 0;
+        }
+
         public Question getNextQuestion()
             {
                 if (this.currentQuestion < this.totalQuestions) // If there are still questions left in the session:

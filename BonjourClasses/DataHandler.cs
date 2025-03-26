@@ -107,6 +107,32 @@ namespace BonjourClasses
             }
             return null;
         }
+
+        public Question getQuestion(String ID) {
+            if (this.questionList.ContainsKey(ID))
+            {
+                return this.questionList[ID];
+            }
+            return null;
+        }
+
+        public Question getQuestionFromText(String text)
+            // I hate that I have to write this code, but ListView sucks.
+        {
+            foreach (Question q in this.questionList.Values)
+            {
+                if (q.getText() == text)
+                {
+                    return q;
+                }
+            }
+            return null;
+        }
+
+        public List<Question> getAllQuestions() {
+            return this.questionList.Values.ToList();
+        }
+
         public List<Question> getQuickQuestions() { 
             List<Question> list = new List<Question>();
             Random rnd = new Random();

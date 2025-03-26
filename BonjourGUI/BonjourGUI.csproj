@@ -136,6 +136,9 @@
     <EmbeddedResource Include="frmAfterview.resx">
       <DependentUpon>frmAfterview.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAllQuestions.resx">
+      <DependentUpon>frmAllQuestions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmArts.resx">
       <DependentUpon>frmArts.cs</DependentUpon>
     </EmbeddedResource>
