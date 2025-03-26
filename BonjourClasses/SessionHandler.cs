@@ -56,6 +56,13 @@ namespace BonjourClasses
             Console.WriteLine("Question answered correctly.");
             currentSession.incrementCorrect();
         }
+
+        public static void reportIncorrect(Question q)
+        {
+            ph.reportIncorrect(q);
+            Console.WriteLine("Question answered incorrectly.");
+        }
+
         public static Question getNextQuestion()
         {
             Console.WriteLine("Retrieving next question in session.");

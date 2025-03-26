@@ -68,5 +68,17 @@ namespace BonjourGUI
         {
             Application.Run(new frmArts(this.ph, this.dh));
         }
+
+        private void btnQuestions_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Thread t = new Thread(new ThreadStart(ThreadQuestionsForm));
+            t.Start();
+        }
+
+        private void ThreadQuestionsForm()
+        {
+            Application.Run(new frmAllQuestions());
+        }
     }
 }

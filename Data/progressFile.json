@@ -22,5 +22,6 @@
 		"Bakery": false,
 		"Eraser": false
 	},
-	"completed": ["F-01", "F-02", "F-03", "F-00"]
+	"completed": ["F-01", "F-02", "F-03", "F-00"],
+	"missed": { "F-00": 0, "F-01": 0 }
 }

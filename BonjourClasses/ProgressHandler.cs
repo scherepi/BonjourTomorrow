@@ -13,6 +13,7 @@ namespace BonjourClasses
         public Dictionary<String, (int, int)> topicProgress;    // A dictionary of topics and their progress.
         public Dictionary<String, bool> unlocks;                // A dictionary of unlocks and their status.
         public List<String> completed;                           // A list of answered questions.
+        public Dictionary<String, uint> missed;                              // A dictionary of missed questions and how many times they've been missed.
 
         public ProgressHandler(DataHandler parent, String progressFile)
         {
@@ -37,6 +38,11 @@ namespace BonjourClasses
             foreach(JsonElement id in jsonProgress.RootElement.GetProperty("completed").EnumerateArray())
             {
                 completed.Add(id.GetString());
+            }
+            missed = new Dictionary<String, uint>();
+            foreach (JsonProperty question in jsonProgress.RootElement.GetProperty("missed").EnumerateObject())
+            {
+                missed.Add(question.Name, question.Value.GetUInt32());
             }
             // And we're done! Everything should be loaded.
         }
@@ -63,7 +69,12 @@ namespace BonjourClasses
             {
                 System.Console.WriteLine("Question already completed.");
                 return;
-            } else
+            } else if (missed.ContainsKey(q.getID())) // If the question is in the missed list, remove it from there but DON'T progress the topic until they get it right again.
+            {
+                System.Console.WriteLine(q.getID() + " was in the missed list.");
+                missed.Remove(q.getID());
+            }
+            else
             {
                 completed.Add(q.getID()); // Otherwise, add it to the completed list.
                 switch (q.getID()[0]) // Here's the clever part: we use the first character of the ID to figure out what topic it belongs to, and call progressTopic() accordingly.
@@ -81,6 +92,19 @@ namespace BonjourClasses
                         this.progressTopic("Numbers");
                         break;
                 }
+            }
+        }
+
+        public void reportIncorrect(Question q)
+        {
+            // Called by SessionHandler when a question is answered incorrectly. Logs it.
+            if (missed.ContainsKey(q.getID()))
+            {
+                missed[q.getID()]++;
+            }
+            else
+            {
+                missed.Add(q.getID(), 1);
             }
         }
 
@@ -117,6 +141,12 @@ namespace BonjourClasses
                 unlocks[unlock] = false; // Then, set all our unlocks back to false.
             }
             completed.Clear();
+
+            var missedKeys = new List<string>(missed.Keys);
+            foreach (String m in missedKeys)
+            {
+                missed.Remove(m); // Finally, clear the missed list.
+            }
         }
         public void maxOut()
         {
@@ -161,9 +191,19 @@ namespace BonjourClasses
             {
                 finalData += "\"" + id + "\", ";
             }
-            // Remove the last comma and space, finish the write
+            // Remove the last comma and space, finish writing that array
             if (completed.Count > 0) { finalData = finalData.Substring(0, finalData.Length - 2); }
-            finalData += "]\n}";
+            finalData += "],\n";
+            finalData += "\t\"missed\": { ";
+            if (missed.Count > 0)
+            {
+                foreach (String m in missed.Keys)
+                {
+                    finalData += "\"" + m + "\": " + missed[m] + ", ";
+                }
+                finalData = finalData.Substring(0, finalData.Length - 2);
+            }
+            finalData += " }\n}";
             return finalData;
         }
         public void printDebug()

@@ -119,6 +119,7 @@
             this.btnQuestions.TabIndex = 15;
             this.btnQuestions.Text = "Questions";
             this.btnQuestions.UseVisualStyleBackColor = false;
+            this.btnQuestions.Click += new System.EventHandler(this.btnQuestions_Click);
             // 
             // btnTopics
             // 

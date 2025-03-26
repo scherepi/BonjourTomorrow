@@ -20,13 +20,13 @@ namespace BonjourClasses
     {
         public String dataPath; // The path to the data folder
         public LinkedList<Topic> topicList; // The list of Topic objects and the questions they contain.
-        public List<Question> questionList; // The list of all questions, for quick access.
+        public Dictionary<String, Question> questionList; // A dictionary of all questions based on ID, for quick access.
         public ProgressHandler progressHandler;
         public DataHandler(String dataPath)
         {
             this.dataPath = dataPath;
             this.topicList = new LinkedList<Topic>();
-            this.questionList = new List<Question>();
+            this.questionList = new Dictionary<String, Question>();
             try { this.initalizeData(); } catch (FileNotFoundException) { System.Console.WriteLine("Unable to initalize data!"); }
         }
         public void printDebug()
@@ -40,7 +40,7 @@ namespace BonjourClasses
             int sum = 0;
             foreach (Topic t in this.topicList) { sum += t.getQuestions().Count; }
             Console.WriteLine(sum);
-            Console.WriteLine("First question's id: " + this.questionList[0].getID());
+            Console.WriteLine("First question's id: " + this.questionList.First().Key);
         }
         public void initalizeData() {
             // if the data folder exists, then we wanna go through each topic file and pass it to the constructor!
@@ -56,7 +56,10 @@ namespace BonjourClasses
                         topicName = topicName.Substring(0, topicName.Length - 4);
                         Topic toBeAdded = new Topic(topicName, File.ReadAllText(file));
                         this.topicList.AddLast(toBeAdded);
-                        this.questionList.AddRange(toBeAdded.getQuestions());
+                        foreach (Question q in toBeAdded.getQuestions())
+                        {
+                            this.questionList.Add(q.getID(), q);
+                        }
                     }
                 }
                 else {
@@ -109,7 +112,8 @@ namespace BonjourClasses
             Random rnd = new Random();
             for (int i = 0; i < 20; i++)
             {
-                list.Add(this.questionList[rnd.Next(0, this.questionList.Count)]);
+                //list.Add(this.questionList[rnd.Next(0, this.questionList.Count)]);
+                list.Add(this.questionList.ElementAt(rnd.Next(0, this.questionList.Count)).Value);
             }
             return list;
         }

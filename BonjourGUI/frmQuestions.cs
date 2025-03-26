@@ -117,6 +117,7 @@ namespace BonjourGUI
             {
                 lblFeedback.Text = "Incorrect!";
                 lblFeedback.ForeColor = Color.FromName("Red");
+                SessionHandler.reportIncorrect(question);
             }
             // Turn off all the answer buttons:
             btnOptionOne.Enabled = false;
